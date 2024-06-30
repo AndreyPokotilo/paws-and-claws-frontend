@@ -1,8 +1,8 @@
 {
-  "name": "paws-and-claws",
+  "name": "paws-and-claws-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andreypokotilo.github.io/PawsAndClaws_frontend/",
+  "homepage": "https://andreypokotilo.github.io/paws-and-claws-frontend/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
