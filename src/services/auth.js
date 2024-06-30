@@ -12,7 +12,6 @@ const setToken = token => {
 };
 
 
-
 instance.interceptors.response.use(
   response => response,
   async error => {
