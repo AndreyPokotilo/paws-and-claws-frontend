@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eed4"
+  },
+  "ua": "Україна",
+  "en": "Ukraine",
+  "code": "ua"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eece"
+  },
+  "ua": "Ірландія",
+  "en": "Ireland",
+  "code": "ie"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eecf"
+  },
+  "ua": "Франція",
+  "en": "France",
+  "code": "fr"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eed0"
+  },
+  "ua": "Великобританія",
+  "en": "Great Britain",
+  "code": "gb"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eed2"
+  },
+  "ua": "США",
+  "en": "USA",
+  "code": "us"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eed1"
+  },
+  "ua": "Канада",
+  "en": "Canada",
+  "code": "ca"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eed3"
+  },
+  "ua": "Чехія",
+  "en": "Czech Republic",
+  "code": "cz"
+},
+{
+  "_id": {
+    "$oid": "64d014a976de8bce9cf3eed5"
+  },
+  "ua": "Німеччина",
+  "en": "Germany",
+  "code": "de"
+},
+{
+  "_id": {
+    "$oid": "658d21a508367b4cb6a96ef2"
+  },
+  "ua": "Італія",
+  "en": "Italy",
+  "code": "IT"
+},
+{
+  "_id": {
+    "$oid": "658d3d48d9e55c70bd5e50ba"
+  },
+  "ua": "Литва",
+  "en": "Lithuania",
+  "code": "LT"
+},
+{
+  "_id": {
+    "$oid": "658ee7cbfc8292602fda042f"
+  },
+  "ua": "Угорщина",
+  "en": "Hungary",
+  "code": "HU"
+}]

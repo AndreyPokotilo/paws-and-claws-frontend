@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "65ce4a6a73e6e989e910607d"
+  },
+  "name": "Andrii Pokotilo",
+  "email": "dpon444@gmail.com",
+  "password": "$2b$10$yz2FUis.LmRMlgLNsOZpsOkrlsNM30YkQS9V4LXmofUxngT5ZU0Pq",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Y2U0YTZhNzNlNmU5ODllOTEwNjA3ZCIsImlhdCI6MTcxOTc0MDE3MCwiZXhwIjoxNzE5NzQwMTkwfQ.h0A-3O-jwokc98KvDw6iKCsozaaRtm2ZEjwSVWtFI20",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Y2U0YTZhNzNlNmU5ODllOTEwNjA3ZCIsImlhdCI6MTcxOTc0MDE3MCwiZXhwIjoxNzIwMzQ0OTcwfQ.cBd-KclQvQZx1Vdbct_j8i_Hez3goyt_s1nWQNtM8RI",
+  "resetPasswordToken": "",
+  "verify": true,
+  "createdAt": {
+    "$date": "2024-02-15T17:31:22.464Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-30T09:36:10.480Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65db3a6bcdf91ff6679d91f8"
+  },
+  "name": "Play Football",
+  "email": "playfootball826@gmail.com",
+  "password": "$2b$10$06SSVhZ/o8n7QMTkmibwHu3QJZGnuXpH0DeZlFFLJW226T4w20F9u",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGIzYTZiY2RmOTFmZjY2NzlkOTFmOCIsImlhdCI6MTcxMTM5MzU0OCwiZXhwIjoxNzExMzkzNTY4fQ.WkXKgrVijW13UsOkSNkcRKVkGxaA6fjKd3AHLPI0pyM",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGIzYTZiY2RmOTFmZjY2NzlkOTFmOCIsImlhdCI6MTcxMTM5MzU0OCwiZXhwIjoxNzExOTk4MzQ4fQ.xK5mFd-8z5Z_TcgJQ2PlAkE4t8J34Es7BPrWfrpjuG0",
+  "resetPasswordToken": "",
+  "verify": true,
+  "createdAt": {
+    "$date": "2024-02-25T13:02:35.977Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-25T19:05:48.056Z"
+  }
+}]

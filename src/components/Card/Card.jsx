@@ -229,7 +229,7 @@ export const Card = ({ el, onClick }) => {
       </Link>
 
       <Link
-        to={`/catalog/${el._pet._id}/${el._category._id}/${el._variant._id}/${el._id}`}
+        to={`/catalog/${el?._pet?._id}/${el?._category?._id}/${el?._variant?._id}/${el?._id}`}
         // to={`${elType.productCode}`}
         onClick={() => onClick(el)}
       >
@@ -246,7 +246,7 @@ export const Card = ({ el, onClick }) => {
           <div>
             <BrandNameSt to={'/brands'}>{el.brand}</BrandNameSt>
             <Link
-              to={`/catalog/${el._pet._id}/${el._category._id}/${el._variant._id}/${el._id}`}
+              to={`/catalog/${el?._pet?._id}/${el?._category?._id}/${el?._variant?._id}/${el?._id}`}
               onClick={() => onClick(el)}
             >
               <FixedBlock style={{ height: '48px' }}>

@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "64d0055d76de8bce9cf3eebd"
+  },
+  "ua": "Сухий корм для собак",
+  "en": "Dry Dog Food",
+  "code": "dry_dog_food",
+  "_pet": {
+    "$oid": "64cef53b53f2bc3e1c80705e"
+  },
+  "_category": {
+    "$oid": "64cef5e853f2bc3e1c807063"
+  }
+},
+{
+  "_id": {
+    "$oid": "64d0055d76de8bce9cf3eebe"
+  },
+  "ua": "Консерви для собак",
+  "en": "Wet Dog Food",
+  "code": "wet_dog_food",
+  "_pet": {
+    "$oid": "64cef53b53f2bc3e1c80705e"
+  },
+  "_category": {
+    "$oid": "64cef5e853f2bc3e1c807063"
+  }
+},
+{
+  "_id": {
+    "$oid": "64d0055d76de8bce9cf3eebf"
+  },
+  "ua": "Сухий корм для котів",
+  "en": "Dry Cat Food",
+  "code": "dry_cat_food",
+  "_pet": {
+    "$oid": "64cef53b53f2bc3e1c80705f"
+  },
+  "_category": {
+    "$oid": "64cef5e853f2bc3e1c807064"
+  }
+},
+{
+  "_id": {
+    "$oid": "64d0055d76de8bce9cf3eec0"
+  },
+  "ua": "Консерви для котів",
+  "en": "Wet Cat Food",
+  "code": "wet_cat_food",
+  "_pet": {
+    "$oid": "64cef53b53f2bc3e1c80705f"
+  },
+  "_category": {
+    "$oid": "64cef5e853f2bc3e1c807064"
+  }
+},
+{
+  "_id": {
+    "$oid": "64d0055d76de8bce9cf3eec1"
+  },
+  "ua": "Корм для кошенят",
+  "en": "Food for Kittens",
+  "code": "food_for_kittens",
+  "_pet": {
+    "$oid": "64cef53b53f2bc3e1c80705f"
+  },
+  "_category": {
+    "$oid": "64cef5e853f2bc3e1c807064"
+  }
+},
+{
+  "_id": {
+    "$oid": "652c447b8c1c553f533b4241"
+  },
+  "ua": "Корм для цуценят",
+  "en": "Food for Puppies",
+  "code": "food_for_puppies",
+  "_pet": {
+    "$oid": "64cef53b53f2bc3e1c80705e"
+  },
+  "_category": {
+    "$oid": "64cef5e853f2bc3e1c807063"
+  }
+}]

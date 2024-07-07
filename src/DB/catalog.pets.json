@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "64cef53b53f2bc3e1c80705e"
+  },
+  "ua": "Товари для собак",
+  "en": "For Dogs",
+  "code": "for_dogs",
+  "button_en": "Dogs",
+  "button_ua": "Собаки"
+},
+{
+  "_id": {
+    "$oid": "64cef53b53f2bc3e1c80705f"
+  },
+  "ua": "Товари для котів",
+  "en": "For Cats",
+  "code": "for_cats",
+  "button_en": "Cats",
+  "button_ua": "Коти"
+}]
