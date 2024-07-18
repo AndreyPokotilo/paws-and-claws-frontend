@@ -126,17 +126,17 @@ const MainInfo = ({ product, prodNameLength }) => {
           </CardCodeListItem>
           <CardCodeListItem>
             <span>Країна-виробник:</span>
-            <span>{_country && _country.ua}</span>
+            <span>{_country && _country?.ua}</span>
             <span>
               <ReactCountryFlag
-                countryCode={_country.code}
+                countryCode={_country?.code}
                 svg
                 style={{
                   width: '20px',
                   height: '14px',
                   borderRadius: '2px',
                 }}
-                title={_country.code}
+                title={_country?.code}
               />
             </span>
           </CardCodeListItem>

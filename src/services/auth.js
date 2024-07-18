@@ -3,7 +3,8 @@ import axios from 'axios';
 const instance = axios.create({
   // baseURL: 'https://paws-and-claws-store.onrender.com',
   // baseURL: "https://paws-and-claws-store-k6lb.onrender.com",
-  baseURL: 'http://localhost:4000',
+  // baseURL: 'http://localhost:4000',
+  baseURL: 'https://paws-and-claws-backend.onrender.com',
   withCredentials: true,
 });
 
@@ -16,7 +17,7 @@ instance.interceptors.response.use(
   response => response,
   async error => {
        
-    if (error?.response?.status === 401 && !error?.config?._retry && error.request.responseURL !== 'https://paws-and-claws-store/api/auth/verifyResetToken') {
+    if (error?.response?.status === 401 && !error?.config?._retry && error.request.responseURL !== 'https://paws-and-claws-backend/api/auth/verifyResetToken') {
         const { data } = await instance.get('/api/auth/refresh', {withCredentials: true});
         localStorage.setItem('accessToken',data?.accessToken);
         error.config.headers.authorization = `Bearer ${data?.accessToken}`;

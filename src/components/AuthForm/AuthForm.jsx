@@ -272,7 +272,10 @@ export function AuthForm() {
                 </Button>
                 {/* <Button type="button"><Google/>Вхід через Google</Button> */}
                 {/* <Button type="button"><Google/>Вхід через Google</Button> */}
-                <GoogleLink href='http://localhost:4000/api/auth/google'><Google/>Вхід через Google</GoogleLink>
+                
+                <GoogleLink href='https://paws-and-claws-backend.onrender.com/api/auth/google'><Google/>Вхід через Google</GoogleLink>
+
+                {/* <GoogleLink href='http://localhost:4000/api/auth/google'><Google/>Вхід через Google</GoogleLink> */}
                 {/* <GoogleLink href='https://paws-and-claws-store.onrender.com/api/auth/google'><Google/>Вхід через Google</GoogleLink> */}
             </Form>
           )}
