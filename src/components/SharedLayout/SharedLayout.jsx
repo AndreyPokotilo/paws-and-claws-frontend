@@ -24,7 +24,6 @@ const SharedLayout = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const token = searchParams.get('token');
-  console.log("token:", token)
 
   useEffect(()=>{
       
