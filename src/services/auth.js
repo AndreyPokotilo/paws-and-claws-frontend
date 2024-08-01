@@ -23,7 +23,7 @@ instance.interceptors.response.use(
       error.request.responseURL !==
         'https://paws-and-claws-backend/api/auth/verifyResetToken'
     ) {
-      error.config._retry = true;
+      // error.config._retry = true;
       try {
         const { data } = await instance.get(
           '/api/auth/refresh',
@@ -35,7 +35,7 @@ instance.interceptors.response.use(
         return instance(error.config);
       } catch (refeshError) {
         console.error('Unable to refresh token', refeshError);
-        Promise.reject(refeshError);
+        return Promise.reject(refeshError);
       }
     }
 
