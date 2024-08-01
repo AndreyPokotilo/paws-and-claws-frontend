@@ -23,10 +23,8 @@ instance.interceptors.response.use(
       error.request.responseURL !==
         'https://paws-and-claws-backend/api/auth/verifyResetToken'
     ) {
-        const { data } = await instance.get(
-          '/api/auth/refresh',
-          { withCredentials: true },
-        );
+        const { data } = await instance.get('/api/auth/refresh', { withCredentials: true });
+        console.log("data:", data)
         localStorage.setItem('accessToken', data?.accessToken);
         error.config.headers.authorization = `Bearer ${data?.accessToken}`;
         setToken(data?.accessToken);
