@@ -27,7 +27,6 @@ instance.interceptors.response.use(
       try {
         const { data } = await instance.post(
           '/api/auth/refresh',
-          {},
           { withCredentials: true },
         );
         localStorage.setItem('accessToken', data?.accessToken);
