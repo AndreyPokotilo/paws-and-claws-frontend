@@ -25,7 +25,7 @@ instance.interceptors.response.use(
     ) {
       error.config._retry = true;
       try {
-        const { data } = await instance.post(
+        const { data } = await instance.get(
           '/api/auth/refresh',
           { withCredentials: true },
         );
