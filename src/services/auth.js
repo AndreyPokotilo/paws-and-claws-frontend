@@ -3,7 +3,7 @@ import axios from 'axios';
 const instance = axios.create({  
   // baseURL: 'http://localhost:4000',
   baseURL: 'https://paws-and-claws-backend.onrender.com',
-  withCredentials: true,
+  // withCredentials: true,
 });
 
 const setToken = token => {
@@ -22,7 +22,7 @@ instance.interceptors.response.use(
         'https://paws-and-claws-backend/api/auth/verifyResetToken'
     ) { 
         error.config._retry=true;
-        const { data } = await instance.post('/api/auth/refresh');
+        const { data } = await instance.post('/api/auth/refresh',{},{withCredentials: true});
         localStorage.setItem('accessToken', data?.accessToken);
         error.config.headers.authorization = `Bearer ${data?.accessToken}`;
         setToken(data?.accessToken);
