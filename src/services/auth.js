@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const instance = axios.create({
-  // baseURL: 'https://paws-and-claws-store.onrender.com',
-  // baseURL: "https://paws-and-claws-store-k6lb.onrender.com",
+const instance = axios.create({  
   // baseURL: 'http://localhost:4000',
   baseURL: 'https://paws-and-claws-backend.onrender.com',
   withCredentials: true,
@@ -22,9 +20,9 @@ instance.interceptors.response.use(
       !error?.config?._retry &&
       error.request.responseURL !==
         'https://paws-and-claws-backend/api/auth/verifyResetToken'
-    ) {
-        const { data } = await instance.get('/api/auth/refresh', { withCredentials: true });
-        console.log("data:", data)
+    ) { 
+        error.config._retry=true;
+        const { data } = await instance.post('/api/auth/refresh');
         localStorage.setItem('accessToken', data?.accessToken);
         error.config.headers.authorization = `Bearer ${data?.accessToken}`;
         setToken(data?.accessToken);

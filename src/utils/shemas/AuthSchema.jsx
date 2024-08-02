@@ -61,7 +61,7 @@ export const loginSchema = Yup.object({
     // .max(16, 'Password is too long. The maximum 16 symbols')
     .required("Поле пароля обов'язкове!")
     .min(6, 'Пароль занадто короткий. Мінімум 6 символів')
-    .max(16, 'Пароль задовгий. Максимум 16 символів'),
+    .max(20, 'Пароль задовгий. Максимум 20 символів'),
 });
 
 export const registerSchema = Yup.object({
