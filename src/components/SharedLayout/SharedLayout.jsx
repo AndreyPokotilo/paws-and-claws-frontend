@@ -30,7 +30,7 @@ const SharedLayout = () => {
   if(token) {
     localStorage.setItem("accessToken", token);
     dispatch(showUserPage());
-    navigation('/user')
+    navigation('user')
   }
   },[token, dispatch, navigation])
 

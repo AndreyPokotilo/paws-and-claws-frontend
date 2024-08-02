@@ -5,11 +5,11 @@ import { Navigate } from 'react-router-dom';
 const PublicRoute = ({
   children,
 }) => {
-  const { isLoggedIn } = useAuth();
+  const { isRegistered, isLoggedIn } = useAuth();
   return (
     <>
       {/* {isLoading && <Loader />} */}
-      {  !isLoggedIn ? children : <Navigate to='/' /> }
+      {  !isLoggedIn || !isRegistered ? children : <Navigate to='/' /> }
     </>
   );
 };
