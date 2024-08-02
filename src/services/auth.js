@@ -16,8 +16,8 @@ instance.interceptors.response.use(
   response => response,
   async error => {
     if (
-      error?.response?.status === 401 &&
-      !error?.config?._retry &&
+      error.response.status === 401 &&
+      !error.config._retry &&
       error.request.responseURL !==
         'https://paws-and-claws-backend/api/auth/verifyResetToken'
     ) { 
