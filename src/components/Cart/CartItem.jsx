@@ -178,7 +178,7 @@ export const CartItem = ({ prod, unavailable }) => {
         }}
       >
         <Link
-          to={`/catalog/${prod.pet._id}/${prod.category._id}/${prod.variant._id}/${prod.id}`}
+          to={`/catalog/${prod?.pet?._id}/${prod?.category?._id}/${prod?.variant?._id}/${prod?.id}`}
         >
           <ImgWrapper className="imgContainer" count={count}>
             {isUnavailable && count !== 0 && (
@@ -216,12 +216,12 @@ export const CartItem = ({ prod, unavailable }) => {
               <Brand to={'/brands'}>{brand}</Brand>
             </span>
             <Link
-              to={`/catalog/${prod.pet._id}/${prod.category._id}/${prod.variant._id}/${prod.id}`}
+              to={`/catalog/${prod?.pet?._id}/${prod?.category?._id}/${prod?.variant?._id}/${prod?.id}`}
             >
               <ProdTitle>{productName}</ProdTitle>
             </Link>
             <Link
-              to={`/catalog/${prod.pet._id}/${prod.category._id}/${prod.variant._id}/${prod.id}`}
+              to={`/catalog/${prod?.pet?._id}/${prod?.category?._id}/${prod?.variant?._id}/${prod?.id}`}
             >
               <ShortDesc>{shortDescription}</ShortDesc>
             </Link>
