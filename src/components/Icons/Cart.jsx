@@ -1,14 +1,17 @@
 import React from 'react';
+import { useWindowSize } from '../../hooks/useWindowSize';
 import { SvgStyled } from './SvgStyled.styled';
 
 export const CartIcon = () => {
+  const screenWidth = useWindowSize();
+
   return (
     <SvgStyled
       id="cartIcon"
       className="cartIcon"
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width={screenWidth >= 767 ? "40" : "30"}
+      height={screenWidth >= 767 ? "40" : "30"}
       fill="none"
       viewBox="0 0 40 40"
     >

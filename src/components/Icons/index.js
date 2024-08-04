@@ -3,6 +3,7 @@ export * from './Search';
 export * from './SignIn';
 export * from './Cart';
 export * from './Profile';
+export * from './Menu';
 export * from './Heart';
 export * from './HeartFill';
 export * from './SocialIcons';

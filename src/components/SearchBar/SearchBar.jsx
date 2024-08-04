@@ -70,7 +70,7 @@ export const SearchBar = () => {
   return (
     <>
       <SearchBox resetBoolean={resetBoolean} searchValue={searchValue}>
-        <form action="/frontend/search" onSubmit={handleSubmit}>
+        <form action="/paws-and-claws-frontend/search" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Введіть назву товару"

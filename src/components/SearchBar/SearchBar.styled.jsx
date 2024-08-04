@@ -7,8 +7,20 @@ export const SearchBox = styled.div`
   position: relative;
 
   form {
-    width: ${theme.spacing.step * 157}px;
-    height: ${theme.spacing.step * 11}px;
+    width: 100%;
+
+    @media (min-width: ${props => props.theme.breakpoints.s}) {
+      width: ${theme.spacing.step * 80}px;
+      height: ${theme.spacing.step * 11}px;
+    }
+    @media (min-width: ${props => props.theme.breakpoints.m}) {
+      width: ${theme.spacing.step * 100}px;
+      height: ${theme.spacing.step * 11}px;
+    }
+    @media (min-width: ${props => props.theme.breakpoints.l}) {
+      width: ${theme.spacing.step * 157}px;
+      height: ${theme.spacing.step * 11}px;
+    }
   }
 
   input {

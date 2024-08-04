@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 import {
+  ButtonMenu,
+  ButtonSearch,
   Count,
   CountContainer,
   CountWrapper,
@@ -18,7 +21,9 @@ import {
   CartNotEmptyIcon,
   HeartIcon,
   LogoIcon,
+  MenuIcon,
   ProfileIcon,
+  SearchIcon,
 } from 'components/Icons';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -32,9 +37,10 @@ import { useAuth } from 'hooks/useAuth';
 export const Header = () => {
   const [scroll, setScroll] = useState('');
   const [userMenuTogle, setUserMenuTogle] = useState(false);
-
-  const {isLoggedIn, isShowUserMenu} = useAuth();
+  const { isLoggedIn, isShowUserMenu } = useAuth();
   const cartStore = useSelector(selectCartStore);
+  const screenWidth = useWindowSize();
+
   const totalCount = cartStore.reduce((previousValue, { cardCount }) => {
     return previousValue + cardCount;
   }, 0);
@@ -54,9 +60,9 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-      if (isShowUserMenu) {
-        setUserMenuTogle(true)
-      }
+    if (isShowUserMenu) {
+      setUserMenuTogle(true);
+    }
   }, [isShowUserMenu]);
 
   // const menuTogle = ()=>setRegistrMenuTogle(true)
@@ -65,12 +71,31 @@ export const Header = () => {
     <HeaderStyled className={scroll}>
       <HeaderContainer>
         <HeaderWrapper>
-          <Link to="/" className="logo">
-            <LogoIcon />
-          </Link>
-          <SearchBar />
+          {screenWidth <= 767 ? (
+            <>
+              {' '}
+              {/* <SearchBar /> */}
+              <ButtonMenu><MenuIcon /></ButtonMenu>
+              <ButtonSearch><SearchIcon /></ButtonSearch>
+              <Link to="/" className="logo">
+                <LogoIcon />
+              </Link>
+            </>
+          ) : (
+            <>
+              {' '}
+              <Link to="/" className="logo">
+                <LogoIcon />
+              </Link>
+              <SearchBar />
+            </>
+          )}
           <LinkWrapper>
-            <ProfilBtn onClick={()=>setUserMenuTogle(true)} disabled={userMenuTogle} isLoggedIn={isLoggedIn}>
+            <ProfilBtn
+              onClick={() => setUserMenuTogle(true)}
+              disabled={userMenuTogle}
+              isLoggedIn={isLoggedIn}
+            >
               <ProfileIcon />
             </ProfilBtn>
             <button>
@@ -97,9 +122,9 @@ export const Header = () => {
               <LengLinkStyled>Eng</LengLinkStyled>
               <LengLinkStyled className="accent">Укр</LengLinkStyled>
             </Leng>
-            {userMenuTogle
-            ? <UserMenu  setUserMenuTogle={setUserMenuTogle}/> 
-            : null}
+            {userMenuTogle ? (
+              <UserMenu setUserMenuTogle={setUserMenuTogle} />
+            ) : null}
           </LinkWrapper>
         </HeaderWrapper>
       </HeaderContainer>

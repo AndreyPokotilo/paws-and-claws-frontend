@@ -48,16 +48,26 @@ export const HeaderContainer = styled.div`
 `;
 
 export const HeaderWrapper = styled.div`
-  /* outline: 1px solid black; */
-  padding-left: ${props => props.theme.spacing.step * 20 - 3}px;
-  padding-right: ${props => props.theme.spacing.step * 21 - 1}px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  justify-content: center;
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    justify-content: space-between;
+    /* outline: 1px solid black; */
+    padding-left: ${props => props.theme.spacing.step * 20 - 3}px;
+    padding-right: ${props => props.theme.spacing.step * 21 - 1}px;
+  }
   .logo {
     /* display: block; */
   }
+`;
+
+export const ButtonMenu = styled.div`
+
+`;
+
+export const ButtonSearch = styled.div`
+
 `;
 
 export const NavLinksWrapper = styled.div`
@@ -105,12 +115,22 @@ export const LogoWrapper = styled.div`
 export const LinkWrapper = styled.div`
   position: relative;
   display: flex;
-  gap: ${theme.spacing.step * 3}px;
+  gap: ${theme.spacing.step * 1}px;
   /* align-items: center; */
   /* justify-content: flex-end; */
   /* gap: ${props => props.theme.spacing.step * 5}px; */
 
   /* margin-left: ${props => props.theme.spacing.step * 7}px; */
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    position: relative;
+    display: flex;
+    gap: ${theme.spacing.step * 1}px;
+  }
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    position: relative;
+    display: flex;
+    gap: ${theme.spacing.step * 3}px;
+  }
 `;
 
 export const CountContainer = styled.div`
@@ -142,9 +162,10 @@ export const Count = styled.span`
 `;
 
 export const ProfilBtn = styled.button`
-> svg{
-  fill: ${props => props.isLoggedIn ? theme.colors.orange : theme.colors.black};
-}
+  > svg {
+    fill: ${props =>
+      props.isLoggedIn ? theme.colors.orange : theme.colors.black};
+  }
 `;
 
 export const LinkItemWrapper = styled.div`

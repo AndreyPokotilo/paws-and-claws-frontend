@@ -23,7 +23,7 @@ export const FormContainer = styled.div`
     height: 629px;
     border-radius: 15px;
   }
-  @media screen and (min-width: 1281px) {
+  @media (min-width: 1281px) {
     height: 617px;
   }
 `;

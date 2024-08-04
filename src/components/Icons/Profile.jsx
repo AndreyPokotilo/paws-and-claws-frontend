@@ -1,12 +1,14 @@
 import React from 'react';
+import { useWindowSize } from '../../hooks/useWindowSize';
 import { SvgStyled } from './SvgStyled.styled';
 
 export const ProfileIcon = () => {
+  const screenWidth = useWindowSize();
   return (
     <SvgStyled
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width={screenWidth >= 767 ? "40" : "30"}
+      height={screenWidth >= 767 ? "40" : "30"}
       viewBox="0 0 40 40"
       fill="none"
     >
