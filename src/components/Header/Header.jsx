@@ -75,8 +75,12 @@ export const Header = () => {
             <>
               {' '}
               {/* <SearchBar /> */}
-              <ButtonMenu><MenuIcon /></ButtonMenu>
-              <ButtonSearch><SearchIcon /></ButtonSearch>
+              <ButtonMenu>
+                <MenuIcon />
+              </ButtonMenu>
+              <ButtonSearch>
+                <SearchIcon />
+              </ButtonSearch>
               <Link to="/" className="logo">
                 <LogoIcon />
               </Link>
