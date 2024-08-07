@@ -67,7 +67,7 @@ export const ButtonMenu = styled.div`
 `;
 
 export const ButtonSearch = styled.div`
-margin-right: 25px;
+margin-right: 30px;
 `;
 
 export const NavLinksWrapper = styled.div`
