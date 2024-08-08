@@ -122,10 +122,10 @@ export const Header = () => {
               )}
             </Link>
 
-            <Leng>
+            {screenWidth >= 767 && <Leng>
               <LengLinkStyled>Eng</LengLinkStyled>
               <LengLinkStyled className="accent">Укр</LengLinkStyled>
-            </Leng>
+            </Leng>}
             {userMenuTogle ? (
               <UserMenu setUserMenuTogle={setUserMenuTogle} />
             ) : null}
