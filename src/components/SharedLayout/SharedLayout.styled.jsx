@@ -17,7 +17,17 @@ export const BoxMT = styled.div`
 export const NavStyle = styled.nav`
   display: flex;
   justify-content: center;
-  gap: ${theme.spacing.step * 6}px;
+  @media (min-width: ${theme.breakpoints.xs}) {
+    gap: ${theme.spacing.step * 3}px;
+
+  }
+  @media (min-width: ${theme.breakpoints.s}) {
+    gap: ${theme.spacing.step * 5}px;
+
+  }
+  @media (min-width: ${theme.breakpoints.m}) {
+    gap: ${theme.spacing.step * 6}px;
+  }
 `;
 
 export const Link = styled(NavLink)`

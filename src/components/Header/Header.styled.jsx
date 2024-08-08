@@ -64,7 +64,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const ButtonMenu = styled.div`
-margin-right: 5px;
+margin-right: 10px;
 `;
 
 export const ButtonSearch = styled.div`
