@@ -59,6 +59,7 @@ export const HeaderWrapper = styled.div`
   }
   .logo {
     /* display: block; */
+    margin-right: 60px;
   }
 `;
 
