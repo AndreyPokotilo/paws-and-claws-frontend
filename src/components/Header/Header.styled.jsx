@@ -63,7 +63,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const ButtonMenu = styled.div`
-
+margin-right: 5px;
 `;
 
 export const ButtonSearch = styled.div`
