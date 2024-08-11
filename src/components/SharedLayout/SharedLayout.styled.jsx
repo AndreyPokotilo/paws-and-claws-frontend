@@ -22,7 +22,7 @@ export const NavStyle = styled.nav`
 
   }
   @media (min-width: ${theme.breakpoints.s}) {
-    gap: ${theme.spacing.step * 5}px;
+    gap: ${theme.spacing.step * 4.5}px;
 
   }
   @media (min-width: ${theme.breakpoints.m}) {

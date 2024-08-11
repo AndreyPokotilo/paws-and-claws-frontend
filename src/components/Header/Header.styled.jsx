@@ -63,6 +63,10 @@ export const HeaderWrapper = styled.div`
   }
 `;
 
+export const LogoLink = styled(Link)`
+
+`;
+
 export const ButtonMenu = styled.div`
 margin-right: 10px;
 `;

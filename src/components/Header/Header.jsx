@@ -10,6 +10,7 @@ import {
   HeaderContainer,
   HeaderStyled,
   HeaderWrapper,
+  LogoLink,
   Leng,
   LengLinkStyled,
   LinkWrapper,
@@ -81,16 +82,16 @@ export const Header = () => {
               <ButtonSearch>
                 <SearchIcon />
               </ButtonSearch>
-              <Link to="/" className="logo">
+              <LogoLink to="/" className="logo">
                 <LogoIcon />
-              </Link>
+              </LogoLink>
             </>
           ) : (
             <>
               {' '}
-              <Link to="/" className="logo">
+              <LogoLink to="/" className="logo">
                 <LogoIcon />
-              </Link>
+              </LogoLink>
               <SearchBar />
             </>
           )}
