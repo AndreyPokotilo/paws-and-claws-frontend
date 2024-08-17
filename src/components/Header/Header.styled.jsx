@@ -59,20 +59,23 @@ export const HeaderWrapper = styled.div`
   }
   .logo {
     /* display: block; */
-    margin-right: 60px;
+    /* margin-right: 60px; */
   }
 `;
 
 export const LogoLink = styled(Link)`
-
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
 `;
 
 export const ButtonMenu = styled.div`
-margin-right: 10px;
+  /* margin-right: 10px; */
 `;
 
 export const ButtonSearch = styled.div`
-margin-right: 35px;
+  /* margin-right: 35px; */
 `;
 
 export const NavLinksWrapper = styled.div`

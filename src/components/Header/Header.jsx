@@ -123,7 +123,7 @@ export const Header = () => {
               )}
             </Link>
 
-            {screenWidth >= 767 && <Leng>
+            {screenWidth >= 768 && <Leng>
               <LengLinkStyled>Eng</LengLinkStyled>
               <LengLinkStyled className="accent">Укр</LengLinkStyled>
             </Leng>}

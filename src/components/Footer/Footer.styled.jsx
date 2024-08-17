@@ -13,6 +13,7 @@ export const FooterBox = styled.div`
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
   gap: ${props => props.theme.spacing.step * 5}px;
 
@@ -28,6 +29,7 @@ export const FooterContainer = styled.div`
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     width: ${props => props.theme.breakpoints.l};
+    flex-wrap: nowrap;
   }
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
     width: ${props => props.theme.breakpoints.xl};
