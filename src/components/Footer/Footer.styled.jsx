@@ -6,30 +6,42 @@ export const FooterStyled = styled.footer`
 `;
 
 export const FooterBox = styled.div`
-  width: 304px;
-  padding-top: 40px;
+  width: 250px;
+  padding-top: 25px;
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    padding-top: 40px;
+    width: 280px;
+  }
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    width: 304px;
+  }
 `;
 
 export const FooterContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   gap: ${props => props.theme.spacing.step * 5}px;
-
-  padding: 0 ${props => props.theme.spacing.step * 20 + 2}px
-    ${props => props.theme.spacing.step * 53}px
-    ${props => props.theme.spacing.step * 20 + 2}px;
+  padding: 0 ${props => props.theme.spacing.step * 7}px
+    ${props => props.theme.spacing.step * 25}px
+    ${props => props.theme.spacing.step * 7}px;  
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
+    padding: 0 ${props => props.theme.spacing.step * 10}px
+    ${props => props.theme.spacing.step * 33}px
+    ${props => props.theme.spacing.step * 10}px;
     width: ${props => props.theme.breakpoints.s};
   }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
+    flex-wrap: nowrap;
+    padding: 0 ${props => props.theme.spacing.step * 20 + 2}px
+    ${props => props.theme.spacing.step * 53}px
+    ${props => props.theme.spacing.step * 20 + 2}px;
     width: ${props => props.theme.breakpoints.m};
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     width: ${props => props.theme.breakpoints.l};
-    flex-wrap: nowrap;
   }
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
     width: ${props => props.theme.breakpoints.xl};
