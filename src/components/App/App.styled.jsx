@@ -38,8 +38,8 @@ export const Section = styled.section`
 export const Container = styled.div`
   /* outline: 1px solid red; */
 
-  padding-left: ${props => props.theme.spacing.step * 20 + 2}px;
-  padding-right: ${props => props.theme.spacing.step * 20 + 2}px;
+ padding-top: ${props => props.theme.spacing.step * 5}px;
+  padding-bottom: ${props => props.theme.spacing.step * 5}px;
 
   margin-left: auto;
   margin-right: auto;
@@ -48,9 +48,13 @@ export const Container = styled.div`
     width: ${props => props.theme.breakpoints.s};
   }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
+    padding-top: ${props => props.theme.spacing.step * 10}px;
+    padding-bottom: ${props => props.theme.spacing.step * 10}px;
     width: ${props => props.theme.breakpoints.m};
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
+    padding-left: ${props => props.theme.spacing.step * 20 + 2}px;
+    padding-right: ${props => props.theme.spacing.step * 20 + 2}px;
     width: ${props => props.theme.breakpoints.l};
   }
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
