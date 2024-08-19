@@ -8,13 +8,10 @@ export const HeaderStyled = styled.header`
   width: 100%;
   height: ${props => props.theme.spacing.step * 19}px;
   padding: ${props => props.theme.spacing.step * 1}px 0px;
-
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  /* z-index: 40; */
   z-index: ${theme.zIndexes.header};
-
   background-color: ${props => props.theme.colors.mainBackground};
   
   &.scroll {
@@ -26,14 +23,11 @@ export const HeaderStyled = styled.header`
   /* outline: 1px solid black; */
 `;
 
-//   padding-left: ${props => props.theme.spacing.step * 20 + 1}px;
-//   padding-right: ${props => props.theme.spacing.step * 20 + 1}px;
-
 export const HeaderContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: ${props => props.theme.breakpoints.s}) and (max-width: 767px) {
+  @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
     min-width: ${props => props.theme.breakpoints.xs};
     max-width: 480px;
   }
@@ -63,17 +57,10 @@ export const HeaderWrapper = styled.div`
     padding-left: ${props => props.theme.spacing.step * 20 - 3}px;
     padding-right: ${props => props.theme.spacing.step * 21 - 1}px;
   }
-  .logo {
-    /* display: block; */
-    /* margin-right: 60px; */
-  }
+  
 `;
 
 export const LogoLink = styled(Link)`
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
-    /* margin-left: auto;
-    margin-right: auto; */
-  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -89,8 +76,6 @@ export const ButtonSearch = styled.div`
 `;
 
 export const NavLinksWrapper = styled.div`
-  /* display: flex; */
-  /* margin-left: 24%; */
   gap: ${props => props.theme.spacing.step * 5}px;
 `;
 
@@ -100,7 +85,6 @@ export const NavLinkStyled = styled(NavLink)`
   font-weight: ${props => props.theme.fontWeight.Regular};
   line-height: ${props => props.theme.lineHeight.l};
   /* transition-property: color, background-color, transform; */
-
   /* transform: scale(1);
   transition-property: color, background-color, transform;
   transition-duration: 0.2s;
@@ -118,10 +102,8 @@ export const NavLinkStyled = styled(NavLink)`
   &.active {
     color: ${props => props.theme.colors.green};
     /* background-color: ${props => props.theme.colors.accent}; */
-
     /* padding: 6px 12px; */
     /* border-radius: 4px; */
-
     /* transform: scale(1); */
     pointer-events: none;
   }
@@ -137,8 +119,8 @@ export const LinkWrapper = styled.div`
   /* align-items: center; */
   /* justify-content: flex-end; */
   /* gap: ${props => props.theme.spacing.step * 5}px; */
-
   /* margin-left: ${props => props.theme.spacing.step * 7}px; */
+  
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     position: relative;
     display: flex;

@@ -7,10 +7,10 @@ export const LogoIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={screenWidth >= 767 ? "220" : "58"}
-      height={screenWidth >= 767 ? "68" : "60"}
+      width={screenWidth >= 768 ? "220" : "58"}
+      height={screenWidth >= 768 ? "68" : "60"}
       fill="none"
-      viewBox={screenWidth >= 767 ? "0 0 220 68" : "0 0 68 68"} 
+      viewBox={screenWidth >= 768 ? "0 0 220 68" : "0 0 68 68"} 
 
     >
       <path
