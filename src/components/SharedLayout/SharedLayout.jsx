@@ -1,5 +1,7 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
+import { useWindowSize } from '../../hooks/useWindowSize';
+
 import Loader from 'components/Loader/Loader';
 import {
   BoxMT,
@@ -25,6 +27,7 @@ const SharedLayout = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const token = searchParams.get('token');
+  const screenWidth = useWindowSize();
 
   useEffect(()=>{
       
@@ -42,13 +45,13 @@ const SharedLayout = () => {
       <Section>
         <Container>
           <BoxMT>
-            <NavStyle>
+            {screenWidth > 767 && <NavStyle>
               <Link to={'catalog'}>Каталог</Link>
               <Link to={'prices-drop'}>Акції</Link>
               <Link to={'brands'}>Бренди</Link>
               <Link to={'aboutUs'}>Про компанію</Link>
               <Link to={'contacts'}>Контакти</Link>
-            </NavStyle>
+            </NavStyle>}
             <Main>
               <Suspense fallback={<Loader />}>
                 <Breadcrumbs />

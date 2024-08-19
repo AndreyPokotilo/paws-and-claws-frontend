@@ -20,13 +20,9 @@ export const BoxMT = styled.div`
 `;
 
 export const NavStyle = styled.nav`
-  display: none;
-
-  @media (min-width: ${theme.breakpoints.s}) {
     display: flex;
     justify-content: center;
     gap: ${theme.spacing.step * 6}px;
-  }
 `;
 
 export const Main = styled.div`
