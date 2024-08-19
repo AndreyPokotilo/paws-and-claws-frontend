@@ -15,6 +15,7 @@ import {
   LengLinkStyled,
   LinkWrapper,
   ProfilBtn,
+  ButtonWrapper,
   // SearchBox,
 } from './Header.styled';
 import {
@@ -76,12 +77,14 @@ export const Header = () => {
             <>
               {' '}
               {/* <SearchBar /> */}
+              <ButtonWrapper>
               <ButtonMenu>
                 <MenuIcon />
               </ButtonMenu>
               <ButtonSearch>
                 <SearchIcon />
               </ButtonSearch>
+              </ButtonWrapper>
               <LogoLink to="/" className="logo">
                 <LogoIcon />
               </LogoLink>

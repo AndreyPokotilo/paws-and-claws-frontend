@@ -8,6 +8,7 @@ import {
   Container,
   Section,
   SharedLayoutBox,
+  Main,
   NavStyle,
   Link,
   ScrollToTopOnRouteChange,
@@ -48,13 +49,13 @@ const SharedLayout = () => {
               <Link to={'aboutUs'}>Про компанію</Link>
               <Link to={'contacts'}>Контакти</Link>
             </NavStyle>
-            <main>
+            <Main>
               <Suspense fallback={<Loader />}>
                 <Breadcrumbs />
                 <Outlet />
               </Suspense>
               <ScrollToTop />
-            </main>
+            </Main>
           </BoxMT>
         </Container>
       </Section>

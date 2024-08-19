@@ -5,17 +5,6 @@ export const FooterStyled = styled.footer`
   margin-top: ${props => props.theme.spacing.step * 8}px;
 `;
 
-export const FooterBox = styled.div`
-  width: 250px;
-  padding-top: 25px;
-  @media (min-width: ${props => props.theme.breakpoints.s}) {
-    padding-top: 40px;
-    width: 280px;
-  }
-  @media (min-width: ${props => props.theme.breakpoints.m}) {
-    width: 304px;
-  }
-`;
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -78,6 +67,18 @@ export const FooterLinkStyled = styled(Link)`
 
     /* transform: scale(1); */
     pointer-events: none;
+  }
+`;
+
+export const FooterBox = styled.div`
+  width: 250px;
+  padding-top: 25px;
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    padding-top: 40px;
+    width: 280px;
+  }
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    width: 304px;
   }
 `;
 

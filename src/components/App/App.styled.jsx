@@ -44,6 +44,11 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
+  @media (min-width: ${props => props.theme.breakpoints.xs} ) and (max-width: 767px) {
+   min-width: ${props => props.theme.breakpoints.xs};
+   max-width: 480px;
+  }
+
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     width: ${props => props.theme.breakpoints.s};
   }

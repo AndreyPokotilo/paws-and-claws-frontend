@@ -4,30 +4,39 @@ import styled from 'styled-components';
 import { theme } from 'styles';
 
 export const SharedLayoutBox = styled.div`
+  /* display: flex;
+flex-direction: column;
+justify-content: center; */
   /* margin: 0 auto; */
   /* position: relative; */
 `;
 
 export const BoxMT = styled.div`
   /* margin-top: 88px; */
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: ${theme.spacing.step * 20 - 2}px;
 `;
 
 export const NavStyle = styled.nav`
-  display: flex;
-  justify-content: center;
-  @media (min-width: ${theme.breakpoints.xs}) {
-    gap: ${theme.spacing.step * 3}px;
+  display: none;
 
-  }
   @media (min-width: ${theme.breakpoints.s}) {
-    gap: ${theme.spacing.step * 4.5}px;
-
-  }
-  @media (min-width: ${theme.breakpoints.m}) {
+    display: flex;
+    justify-content: center;
     gap: ${theme.spacing.step * 6}px;
   }
+`;
+
+export const Main = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+
+  /* @media (min-width: ${theme.breakpoints.xs}) {
+  max-width: 480px;
+  min-width: 360px;
+  } */
 `;
 
 export const Link = styled(NavLink)`
