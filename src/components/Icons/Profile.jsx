@@ -7,8 +7,8 @@ export const ProfileIcon = () => {
   return (
     <SvgStyled
       xmlns="http://www.w3.org/2000/svg"
-      width={screenWidth >= 767 ? "40" : "30"}
-      height={screenWidth >= 767 ? "40" : "30"}
+      width={screenWidth >= 768 ? "40" : "30"}
+      height={screenWidth >= 768 ? "40" : "30"}
       viewBox="0 0 40 40"
       fill="none"
     >

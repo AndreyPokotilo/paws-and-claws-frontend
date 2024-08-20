@@ -17,10 +17,6 @@ export const HeaderStyled = styled.header`
   &.scroll {
     box-shadow: 0px 0px 4px 0px #b2ab73;
   }
-  /* outline: 1px solid red; */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* outline: 1px solid black; */
 `;
 
 export const HeaderContainer = styled.div`
@@ -52,7 +48,7 @@ export const HeaderWrapper = styled.div`
   padding-left: ${props => props.theme.spacing.step * 7}px;
     padding-right: ${props => props.theme.spacing.step * 7}px;
   @media (min-width: ${props => props.theme.breakpoints.m}) {
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* outline: 1px solid black; */
     padding-left: ${props => props.theme.spacing.step * 20 - 3}px;
     padding-right: ${props => props.theme.spacing.step * 21 - 1}px;

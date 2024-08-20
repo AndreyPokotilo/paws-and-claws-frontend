@@ -8,8 +8,8 @@ export const HeartIcon = () => {
   return (
     <SvgStyled
       xmlns="http://www.w3.org/2000/svg"
-      width={screenWidth >= 767 ? "32" : "26"}
-      height={screenWidth >= 767 ? "32" : "26"}
+      width={screenWidth >= 768 ? "32" : "26"}
+      height={screenWidth >= 768 ? "32" : "26"}
       viewBox="0 0 32 32"
       fill="none"
     >

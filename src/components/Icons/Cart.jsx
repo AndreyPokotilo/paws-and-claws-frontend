@@ -10,8 +10,8 @@ export const CartIcon = () => {
       id="cartIcon"
       className="cartIcon"
       xmlns="http://www.w3.org/2000/svg"
-      width={screenWidth >= 767 ? "40" : "30"}
-      height={screenWidth >= 767 ? "40" : "30"}
+      width={screenWidth >= 768 ? "40" : "30"}
+      height={screenWidth >= 768 ? "40" : "30"}
       fill="none"
       viewBox="0 0 40 40"
     >
