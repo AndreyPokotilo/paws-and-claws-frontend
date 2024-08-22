@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { image1, image2, image3, image4, image5 } from '../../images';
+import { image1, image2, image3, image4, image5, banner_mob } from '../../images';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 import { useState } from 'react';
 import { CarouselStyle } from './Crousel.styled';
@@ -57,6 +58,8 @@ const banner = [
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
+  const screenWidth = useWindowSize();
+
 
   const handleSelect = selectedIndex => {
     setIndex(selectedIndex);
@@ -67,7 +70,7 @@ function ControlledCarousel() {
       {banner.map(item => {
         return (
           <Carousel.Item key={item.id}>
-            <img className="d-block w-100" src={item.img} alt={item} />
+            <img className="d-block w-100" src={screenWidth >= 768 ? item.img : banner_mob} alt={item} />
             <Carousel.Caption>
               <div className="captionDescription">
                 <h1 className="title">{item.title}</h1>

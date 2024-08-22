@@ -15,6 +15,10 @@ export const CarouselStyle = styled(Carousel)`
     z-index: ${theme.zIndexes.carousel};
   }
 
+  img {
+    height: 610px;
+    /* width: 430px; */
+  }
   .carousel-indicators {
     gap: 16px;
     margin-bottom: 0;

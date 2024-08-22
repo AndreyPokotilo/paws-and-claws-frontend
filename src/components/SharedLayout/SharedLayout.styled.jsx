@@ -26,13 +26,6 @@ export const NavStyle = styled.nav`
 `;
 
 export const Main = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-
-  /* @media (min-width: ${theme.breakpoints.xs}) {
-  max-width: 480px;
-  min-width: 360px;
-  } */
 `;
 
 export const Link = styled(NavLink)`
