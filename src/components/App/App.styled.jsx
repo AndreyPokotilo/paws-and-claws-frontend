@@ -38,8 +38,8 @@ export const Section = styled.section`
 export const Container = styled.div`
   /* outline: 1px solid red; */
 
- padding-top: ${props => props.theme.spacing.step * 5}px;
-  padding-bottom: ${props => props.theme.spacing.step * 5}px;
+ /* padding-top: ${props => props.theme.spacing.step * 5}px;
+  padding-bottom: ${props => props.theme.spacing.step * 5}px; */
 
   margin-left: auto;
   margin-right: auto;
