@@ -12,7 +12,6 @@ justify-content: center; */
 `;
 
 export const BoxMT = styled.div`
-  /* margin-top: 88px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
