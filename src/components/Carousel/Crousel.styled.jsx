@@ -16,8 +16,10 @@ export const CarouselStyle = styled(Carousel)`
   }
 
   img {
-    height: 610px;
-    /* width: 430px; */
+    @media (min-width: ${props => props.theme.breakpoints.xs} ) and (max-width: 767px) {
+   min-height: 509px;
+   max-height: 610px;
+  }
   }
   .carousel-indicators {
     gap: 16px;
