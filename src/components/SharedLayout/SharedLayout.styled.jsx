@@ -16,7 +16,13 @@ export const BoxMT = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: ${theme.spacing.step * 20 - 2}px;
+ 
+  @media (min-width: ${theme.breakpoints.xs} ) and (max-width: 767px) {
+    margin-top: ${theme.spacing.step * 15-2}px;
+  }
+  @media (min-width: ${theme.breakpoints.s}) {
+    margin-top: ${theme.spacing.step * 20 - 2}px;
+  }
 `;
 
 export const NavStyle = styled.nav`
