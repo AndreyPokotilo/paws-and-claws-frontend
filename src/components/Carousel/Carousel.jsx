@@ -76,9 +76,9 @@ function ControlledCarousel() {
                 <h1 className="title">{item.title}</h1>
                 <p className="discription">{item.discription}</p>
               </div>
-              <Link to={item.link} className="bannerLink">
+              {screenWidth >= 768 && <Link to={item.link} className="bannerLink">
                 {item.linkName}
-              </Link>
+              </Link>}
             </Carousel.Caption>
           </Carousel.Item>
         );

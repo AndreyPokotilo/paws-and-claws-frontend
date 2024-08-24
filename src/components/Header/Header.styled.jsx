@@ -25,7 +25,7 @@ export const HeaderContainer = styled.div`
 
   @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
     min-width: ${props => props.theme.breakpoints.xs};
-    max-width: 480px;
+    max-width: 430px;
   }
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     width: ${props => props.theme.breakpoints.s};

@@ -1,19 +1,16 @@
 import styled from '@emotion/styled';
 
 export const List = styled.ul`
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    justify-content: center;
-        
-
-/* @media (min-width: ${props => props.theme.breakpoints.xs}) { */
-  /*
-  gap: ${props => props.theme.spacing.step * 5}px;  */
-  /* flex-wrap: nowrap; */
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, 304px);
   grid-gap: 20px;
-  /* } */
+  @media screen and (min-width: 430px) and (max-width: 767px) {
+  padding-top: 33px;
+  padding-bottom: 33px;
+  border: 1px solid ${props=> props.theme.colors.orange}
+  }
+  
   
 `;
 

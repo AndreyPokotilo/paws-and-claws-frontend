@@ -1,7 +1,8 @@
-import { Hero, Title } from './Home.styled';
+import { BuyNowLink, Hero, HomeContainer, Title } from './Home.styled';
 import { CardList } from 'components/CardList/CardList';
 import ControlledCarousel from 'components/Carousel/Carousel';
 import { useFetchProductsQuery } from 'redux/api/operations';
+// import { Link } from 'react-router-dom';
 
 import { Notify } from 'notiflix';
 import Loader from 'components/Loader/Loader';
@@ -19,10 +20,13 @@ export const Home = () => {
       ) : isLoading && !isError ? (
         <Loader />
       ) : (
-        <>
+        <HomeContainer>
+          <BuyNowLink to="/catalog" >
+            Купити зараз
+          </BuyNowLink>
           <Title>Aкційні пропозиції</Title>
           <CardList productsList={data} />
-        </>
+        </HomeContainer>
       )}
     </>
   );
