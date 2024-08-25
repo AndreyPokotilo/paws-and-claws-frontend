@@ -9,6 +9,7 @@ const breadCrumbsInitialState = {
     { _id: 'contacts', ua: 'Контакти', en: 'Contacts' },
     { _id: 'search', ua: 'Результати пошуку', en: 'Search results' },
     { _id: 'cart', ua: 'Кошик', en: 'Cart' },
+    { _id: 'registration', ua: 'Реєстрація', en: 'Registration' },
   ],
 };
 
