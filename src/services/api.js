@@ -2,8 +2,8 @@ import axios from 'axios';
 import { Notify } from 'notiflix';
 
 // const API_KEY = '';
-// const BASE_URL = 'https://paws-and-claws-backend.onrender.com';
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL = 'https://paws-and-claws-backend.onrender.com';
+// const BASE_URL = 'http://localhost:4000';
 
 axios.defaults.baseURL = BASE_URL;
 axios.defaults.params = {
