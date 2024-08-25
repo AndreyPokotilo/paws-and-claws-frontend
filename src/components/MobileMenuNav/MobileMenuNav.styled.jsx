@@ -6,7 +6,7 @@ export const MenuContainer = styled.div`
 position: relative;
 bottom: -10px;
 left: 0px;
-/* width: 100%; */
+width: 100%;
 /* max-width: 430px;
 min-width: 320px; */
 height: 700px;

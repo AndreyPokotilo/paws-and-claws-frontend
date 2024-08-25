@@ -40,7 +40,7 @@ import { MobailMenuNav } from 'components/MobileMenuNav/MobileMenuNav';
 export const Header = () => {
   const [scroll, setScroll] = useState('');
   const [userMenuTogle, setUserMenuTogle] = useState(false);
-  const [MobileMenuTogle, setMobileMenuTogle] = useState(false);
+  const [mobileMenuTogle, setMobileMenuTogle] = useState(false);
   const { isLoggedIn, isShowUserMenu } = useAuth();
   const cartStore = useSelector(selectCartStore);
   const screenWidth = useWindowSize();
@@ -81,7 +81,7 @@ export const Header = () => {
               {' '}
               {/* <SearchBar /> */}
               <ButtonWrapper>
-              <ButtonMenu onClick={()=>setMobileMenuTogle(!MobileMenuTogle)}>
+              <ButtonMenu onClick={()=>setMobileMenuTogle(!mobileMenuTogle)}>
                 <MenuIcon />
               </ButtonMenu>
               <ButtonSearch>
@@ -138,7 +138,7 @@ export const Header = () => {
             ) : null}
           </LinkWrapper>
         </HeaderWrapper>
-        {MobileMenuTogle && <MobailMenuNav/>}
+        {mobileMenuTogle && <MobailMenuNav setMobileMenuTogle={setMobileMenuTogle}/>}
       </HeaderContainer>
     </HeaderStyled>
   );

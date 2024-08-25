@@ -2,15 +2,15 @@ import { Link, NavStyle } from "components";
 import { MenuContainer } from "./MobileMenuNav.styled";
 
 
-export const MobailMenuNav = () => {
+export const MobailMenuNav = ({setMobileMenuTogle}) => {
     return(
     <MenuContainer>
         <NavStyle>
-              <Link to={'catalog'}>КАТАЛОГ</Link>
-              <Link to={'prices-drop'}>АКЦІЇ</Link>
-              <Link to={'brands'}>БРЕНДИ</Link>
-              <Link to={'aboutUs'}>ПРО КОМПАНІЮ</Link>
-              <Link to={'contacts'}>МОВА</Link>
+              <Link onClick={()=>setMobileMenuTogle(false)} to={'catalog'}>КАТАЛОГ</Link>
+              <Link onClick={()=>setMobileMenuTogle(false)} to={'prices-drop'}>АКЦІЇ</Link>
+              <Link onClick={()=>setMobileMenuTogle(false)} to={'brands'}>БРЕНДИ</Link>
+              <Link onClick={()=>setMobileMenuTogle(false)} to={'aboutUs'}>ПРО КОМПАНІЮ</Link>
+              <Link onClick={()=>setMobileMenuTogle(false)} to={'contacts'}>MOBA</Link>
             </NavStyle>
     </MenuContainer>
     );
