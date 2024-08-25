@@ -10,7 +10,7 @@ left: 0px;
 /* max-width: 430px;
 min-width: 320px; */
 height: 700px;
-background-color: red;
+background-color: ${props=>props.theme.colors.mainBackground};
 @media (min-width: ${props => props.theme.breakpoints.s}) {
     display: none;
   }

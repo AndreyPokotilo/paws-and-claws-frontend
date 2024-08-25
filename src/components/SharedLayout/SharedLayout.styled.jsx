@@ -15,9 +15,9 @@ export const BoxMT = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
-  @media (min-width: ${theme.breakpoints.xs} ) and (max-width: 767px) {
-    margin-top: ${theme.spacing.step * 15-2}px;
+
+  @media (min-width: ${theme.breakpoints.xs}) and (max-width: 767px) {
+    margin-top: ${theme.spacing.step * 15 - 2}px;
   }
   @media (min-width: ${theme.breakpoints.s}) {
     margin-top: ${theme.spacing.step * 20 - 2}px;
@@ -25,13 +25,19 @@ export const BoxMT = styled.div`
 `;
 
 export const NavStyle = styled.nav`
+
+  @media (min-width: ${theme.breakpoints.xs}) and (max-width: 767px) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: ${theme.breakpoints.s}) {
     display: flex;
     justify-content: center;
     gap: ${theme.spacing.step * 6}px;
+  }
 `;
 
-export const Main = styled.div`
-`;
+export const Main = styled.div``;
 
 export const Link = styled(NavLink)`
   color: ${theme.colors.black};
@@ -50,6 +56,15 @@ export const Link = styled(NavLink)`
 
   &.active {
     color: ${theme.colors.orange};
+  }
+  @media (min-width: ${theme.breakpoints.xs}) and (max-width: 767px) {
+    display: block;
+    font-size: 20px;
+    line-height: 24px; 
+    padding-bottom: 8px;
+    margin-bottom:8px;
+    border-bottom: 0.5px solid ${theme.colors.grey};
+    padding-left: 28px;
   }
 `;
 
