@@ -33,12 +33,14 @@ import { selectCartStore } from 'redux/selectors/selectors';
 import { SearchBar } from 'components/SearchBar/SearchBar';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useAuth } from 'hooks/useAuth';
+import { MobailMenuNav } from 'components/MobileMenuNav/MobileMenuNav';
 
 // import { Search } from './Search';
 
 export const Header = () => {
   const [scroll, setScroll] = useState('');
   const [userMenuTogle, setUserMenuTogle] = useState(false);
+  const [MobileMenuTogle, setMobileMenuTogle] = useState(false);
   const { isLoggedIn, isShowUserMenu } = useAuth();
   const cartStore = useSelector(selectCartStore);
   const screenWidth = useWindowSize();
@@ -72,13 +74,14 @@ export const Header = () => {
   return (
     <HeaderStyled className={scroll}>
       <HeaderContainer>
+      
         <HeaderWrapper>
           {screenWidth <= 767 ? (
             <>
               {' '}
               {/* <SearchBar /> */}
               <ButtonWrapper>
-              <ButtonMenu>
+              <ButtonMenu onClick={()=>setMobileMenuTogle(!MobileMenuTogle)}>
                 <MenuIcon />
               </ButtonMenu>
               <ButtonSearch>
@@ -135,6 +138,7 @@ export const Header = () => {
             ) : null}
           </LinkWrapper>
         </HeaderWrapper>
+        {MobileMenuTogle && <MobailMenuNav/>}
       </HeaderContainer>
     </HeaderStyled>
   );
