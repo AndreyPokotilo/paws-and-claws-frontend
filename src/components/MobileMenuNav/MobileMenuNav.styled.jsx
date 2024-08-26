@@ -18,3 +18,26 @@ background-color: ${props=>props.theme.colors.mainBackground};
 
 // export const LogoLink = styled(Link)`
 // `;
+
+export const LanguageBurger = styled.div`
+color: ${props=>props.theme.colors.black};
+  line-height: 1.25;
+  font-size: ${props=>props.theme.fontSizes.s};
+  overflow: hidden;
+  max-height: ${props => props.isOpen ? '140px' : '32px'};
+  transition: max-height 0.5s ease;
+  &:focus{
+    color: ${props=>props.theme.colors.green};
+  }
+
+ 
+  @media (min-width: ${props=>props.theme.breakpoints.xs}) and (max-width: 767px) {
+    display: block;
+    font-size: 20px;
+    line-height: 24px; 
+    padding-bottom: 8px;
+    margin-bottom:8px;
+    border-bottom: 0.5px solid ${props=>props.theme.colors.grey};
+    padding-left: 28px;
+  }
+`;

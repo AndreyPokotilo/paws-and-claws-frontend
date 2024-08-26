@@ -1,50 +1,43 @@
 import { Leng, LengLinkStyled, Link, NavStyle } from 'components';
-import { MenuContainer } from './MobileMenuNav.styled';
+import { LanguageBurger, MenuContainer } from './MobileMenuNav.styled';
+import { useState } from 'react';
 
 export const MobailMenuNav = ({ setMobileMenuTogle }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleList = () => {
+        setIsOpen(!isOpen);
+      };
+
   return (
     <MenuContainer>
       <NavStyle>
-        <div>
-          <p>КАТАЛОГ</p>
-          <Link onClick={() => setMobileMenuTogle(false)} to={'catalog'}>
+        <Link onClick={() => setMobileMenuTogle(false)} to={'catalog'}>
           КАТАЛОГ
         </Link>
-        </div>
-        <div>
-          <Link onClick={() => setMobileMenuTogle(false)} to={'prices-drop'}>
+
+        <Link onClick={() => setMobileMenuTogle(false)} to={'prices-drop'}>
           АКЦІЇ
         </Link>
-        </div>
-        <div>
-          <Link onClick={() => setMobileMenuTogle(false)} to={'brands'}>
+
+        <Link onClick={() => setMobileMenuTogle(false)} to={'brands'}>
           БРЕНДИ
         </Link>
-        </div>
-        <div>
-          <p>ПРО КОМПАНІЮ</p>
-          <Link onClick={() => setMobileMenuTogle(false)} to={'aboutUs'}>
-          Про компанію
+
+        <Link onClick={() => setMobileMenuTogle(false)} to={'aboutUs'}>
+          ПРО КОМПАНІЮ
         </Link>
         <Link onClick={() => setMobileMenuTogle(false)} to={'contacts'}>
-        Контакти
+          КОНТАКТИ
         </Link>
-        </div>
-        <div>
+
+        <LanguageBurger onClick={toggleList} isOpen={isOpen}>
           <p>MOBA</p>
-          <Link onClick={() => setMobileMenuTogle(false)} to={'contacts'}>
-          MOBA
-        </Link>
-        <Leng>
-              <LengLinkStyled>Eng</LengLinkStyled>
-              <LengLinkStyled className="accent">Укр</LengLinkStyled>
-            </Leng>
-        </div>
-        
-        
-        
-        
-        
+          <Leng>
+            <LengLinkStyled>English</LengLinkStyled>
+            <LengLinkStyled>Deutsch</LengLinkStyled>
+            <LengLinkStyled className="accent">Українська</LengLinkStyled>
+          </Leng>
+        </LanguageBurger>
       </NavStyle>
     </MenuContainer>
   );

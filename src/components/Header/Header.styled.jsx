@@ -13,7 +13,7 @@ export const HeaderStyled = styled.header`
   transform: translateX(-50%);
   z-index: ${theme.zIndexes.header};
   background-color: ${props => props.theme.colors.mainBackground};
-  
+
   &.scroll {
     box-shadow: 0px 0px 4px 0px #b2ab73;
   }
@@ -23,7 +23,7 @@ export const HeaderContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
+  @media (min-width: ${props =>props.theme.breakpoints.xs}) and (max-width: 767px) {
     min-width: ${props => props.theme.breakpoints.xs};
     max-width: 430px;
   }
@@ -46,21 +46,19 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-left: ${props => props.theme.spacing.step * 7}px;
-    padding-right: ${props => props.theme.spacing.step * 7}px;
+  padding-right: ${props => props.theme.spacing.step * 7}px;
   @media (min-width: ${props => props.theme.breakpoints.m}) {
     /* justify-content: space-between; */
     /* outline: 1px solid black; */
     padding-left: ${props => props.theme.spacing.step * 20 - 3}px;
     padding-right: ${props => props.theme.spacing.step * 21 - 1}px;
   }
-  
 `;
 
-export const LogoLink = styled(Link)`
-`;
+export const LogoLink = styled(Link)``;
 
 export const ButtonWrapper = styled.div`
-display: flex;
+  display: flex;
 `;
 
 export const ButtonMenu = styled.div`
@@ -116,7 +114,7 @@ export const LinkWrapper = styled.div`
   /* justify-content: flex-end; */
   /* gap: ${props => props.theme.spacing.step * 5}px; */
   /* margin-left: ${props => props.theme.spacing.step * 7}px; */
-  
+
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     position: relative;
     display: flex;
@@ -174,18 +172,14 @@ export const LinkItemWrapper = styled.div`
 `;
 
 export const Leng = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   width: ${props => props.theme.spacing.step * 17}px;
   gap: ${props => props.theme.spacing.step * 1}px;
-
-  font-weight: ${props => props.theme.fontWeight.Regular};
-  font-size: ${props => props.theme.fontSizes.s};
   line-height: 1.25;
   @media (min-width: ${props => props.theme.breakpoints.s}) {
-    
-  };
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
   /* text-transform: uppercase; */
 `;
 
@@ -193,6 +187,13 @@ export const LengLinkStyled = styled(Link)`
   color: ${props => props.theme.colors.green};
   &.accent {
     color: ${props => props.theme.colors.orange};
+  }
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
   }
 `;
 
