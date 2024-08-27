@@ -22,10 +22,30 @@ export const Footer = () => {
   const [isOpenAboutUs, setIsOpenAboutUs] = useState(false);
 
  const toggleList = (value) => {
-  if(value === 'КАТАЛОГ'){};
-  if(value === 'ПОКУПЦЯМ'){};
-  if(value === 'КОНТАКТИ'){};
-  if(value === 'ПРО КОМПАНІЮ'){};
+  if(value === 'КАТАЛОГ'){
+    setIsOpenCatalog(!isOpenCatlog);
+    setIsOpenForClients(false);
+    setIsOpenContacts(false);
+    setIsOpenAboutUs(false);
+  };
+  if(value === 'ПОКУПЦЯМ'){
+    setIsOpenCatalog(false);
+    setIsOpenForClients(true);
+    setIsOpenContacts(false);
+    setIsOpenAboutUs(false);
+  };
+  if(value === 'КОНТАКТИ'){
+    setIsOpenCatalog(false);
+    setIsOpenForClients(false);
+    setIsOpenContacts(true);
+    setIsOpenAboutUs(false);
+  };
+  if(value === 'ПРО КОМПАНІЮ'){
+    setIsOpenCatalog(false);
+    setIsOpenForClients(false);
+    setIsOpenContacts(false);
+    setIsOpenAboutUs(true);
+  };
     
   } 
         
@@ -34,8 +54,8 @@ export const Footer = () => {
   return (
     <FooterStyled>
       <FooterContainer>
-        <FooterBox>
-          <FooterH2Styled onClick={()=>toggleList('КАТАЛОГ')} isOpenCatlog={isOpenCatlog}>КАТАЛОГ</FooterH2Styled>
+        <FooterBox onClick={()=>toggleList('КАТАЛОГ')} isOpenCatlog={isOpenCatlog}>
+          <FooterH2Styled >КАТАЛОГ</FooterH2Styled>
           <FooterList>
             <li>
               <FooterLinkStyled to="/brands">Бренди</FooterLinkStyled>
@@ -52,8 +72,8 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        <FooterBox>
-          <FooterH2Styled onClick={()=>toggleList('ПОКУПЦЯМ')} isOpenForClients={isOpenForClients}>ПОКУПЦЯМ</FooterH2Styled>
+        <FooterBox onClick={()=>toggleList('ПОКУПЦЯМ')} isOpenForClients={isOpenForClients}>
+          <FooterH2Styled >ПОКУПЦЯМ</FooterH2Styled>
 
           <FooterList>
             <li>
@@ -83,8 +103,8 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        <FooterBox>
-          <FooterH2Styled onClick={()=>toggleList('КОНТАКТИ')} isOpenContacts={isOpenContacts}>КОНТАКТИ</FooterH2Styled>
+        <FooterBox onClick={()=>toggleList('КОНТАКТИ')} isOpenContacts={isOpenContacts}>
+          <FooterH2Styled >КОНТАКТИ</FooterH2Styled>
           <FooterList id="contacts">
             <li>
               <FooterLinkStyled href="tel:+380486752312">
@@ -101,8 +121,8 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        <FooterBox>
-          <FooterH2Styled onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>ПРО КОМПАНІЮ</FooterH2Styled>
+        <FooterBox onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>
+          <FooterH2Styled >ПРО КОМПАНІЮ</FooterH2Styled>
         </FooterBox>
         <FooterBox>
           <FooterH2Styled>Соціальні мережі</FooterH2Styled>
