@@ -73,9 +73,12 @@ export const FooterLinkStyled = styled(Link)`
 export const FooterBox = styled.div`
   width: 250px;
   padding-top: 10px;
-  overflow: hidden;
+  
+  @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
+    overflow: hidden;
   max-height: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? '140px' : '42px')};
   transition: max-height 0.5s ease;
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     padding-top: 40px;
