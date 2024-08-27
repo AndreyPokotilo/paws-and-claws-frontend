@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   FooterBox,
   FooterContainer,
@@ -15,11 +16,15 @@ import {
 } from 'components/Icons/SocialIcons';
 
 export const Footer = () => {
+  const [isOpenCatlog, setIsOpenCatalog] = useState(false);
+  const [isOpenBrends, setIsOpenBrendsds] = useState(false);
+  const [isOpenFoodForDogs, setIsOpenFoodForDogs] = useState(false);
+  const [isOpenFoodForCats, setIsOpenFoodForCats] = useState(false);
   return (
     <FooterStyled>
       <FooterContainer>
         <FooterBox>
-          <FooterH2Styled>Каталог</FooterH2Styled>
+          <FooterH2Styled onClick={()=>setIsOpenCatalog(true)}>Каталог</FooterH2Styled>
           <FooterList>
             <li>
               <FooterLinkStyled to="/brands">Бренди</FooterLinkStyled>
