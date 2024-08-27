@@ -17,14 +17,14 @@ import {
 
 export const Footer = () => {
   const [isOpenCatlog, setIsOpenCatalog] = useState(false);
-  const [isOpenBrends, setIsOpenBrendsds] = useState(false);
-  const [isOpenFoodForDogs, setIsOpenFoodForDogs] = useState(false);
-  const [isOpenFoodForCats, setIsOpenFoodForCats] = useState(false);
+  const [isOpenForClients, setIsOpenForClients] = useState(false);
+  const [isOpenContacts, setIsOpenContacts] = useState(false);
+  const [isOpenAboutUs, setIsOpenAboutUs] = useState(false);
   return (
     <FooterStyled>
       <FooterContainer>
         <FooterBox>
-          <FooterH2Styled onClick={()=>setIsOpenCatalog(true)}>Каталог</FooterH2Styled>
+          <FooterH2Styled onClick={()=>setIsOpenCatalog(true)}>КАТАЛОГ</FooterH2Styled>
           <FooterList>
             <li>
               <FooterLinkStyled to="/brands">Бренди</FooterLinkStyled>
@@ -42,7 +42,7 @@ export const Footer = () => {
           </FooterList>
         </FooterBox>
         <FooterBox>
-          <FooterH2Styled>Покупцям</FooterH2Styled>
+          <FooterH2Styled onClick={()=>setIsOpenForClients(true)}>ПОКУПЦЯМ</FooterH2Styled>
 
           <FooterList>
             <li>
@@ -73,7 +73,7 @@ export const Footer = () => {
           </FooterList>
         </FooterBox>
         <FooterBox>
-          <FooterH2Styled>Контакти</FooterH2Styled>
+          <FooterH2Styled onClick={()=>setIsOpenContacts(true)}>КОНТАКТИ</FooterH2Styled>
           <FooterList id="contacts">
             <li>
               <FooterLinkStyled href="tel:+380486752312">
@@ -90,7 +90,9 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-
+        <FooterBox>
+          <FooterH2Styled onClick={()=>setIsOpenContacts(true)}>ПРО КОМПАНІЮ</FooterH2Styled>
+        </FooterBox>
         <FooterBox>
           <FooterH2Styled>Соціальні мережі</FooterH2Styled>
           <SocialListStyled>
