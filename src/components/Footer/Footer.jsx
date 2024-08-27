@@ -20,11 +20,22 @@ export const Footer = () => {
   const [isOpenForClients, setIsOpenForClients] = useState(false);
   const [isOpenContacts, setIsOpenContacts] = useState(false);
   const [isOpenAboutUs, setIsOpenAboutUs] = useState(false);
+
+ const toggleList = (value) => {
+  if(value === 'КАТАЛОГ'){};
+  if(value === 'ПОКУПЦЯМ'){};
+  if(value === 'КОНТАКТИ'){};
+  if(value === 'ПРО КОМПАНІЮ'){};
+    
+  } 
+        
+      
+
   return (
     <FooterStyled>
       <FooterContainer>
         <FooterBox>
-          <FooterH2Styled onClick={()=>setIsOpenCatalog(true)}>КАТАЛОГ</FooterH2Styled>
+          <FooterH2Styled onClick={()=>toggleList('КАТАЛОГ')} isOpenCatlog={isOpenCatlog}>КАТАЛОГ</FooterH2Styled>
           <FooterList>
             <li>
               <FooterLinkStyled to="/brands">Бренди</FooterLinkStyled>
@@ -42,7 +53,7 @@ export const Footer = () => {
           </FooterList>
         </FooterBox>
         <FooterBox>
-          <FooterH2Styled onClick={()=>setIsOpenForClients(true)}>ПОКУПЦЯМ</FooterH2Styled>
+          <FooterH2Styled onClick={()=>toggleList('ПОКУПЦЯМ')} isOpenForClients={isOpenForClients}>ПОКУПЦЯМ</FooterH2Styled>
 
           <FooterList>
             <li>
@@ -73,7 +84,7 @@ export const Footer = () => {
           </FooterList>
         </FooterBox>
         <FooterBox>
-          <FooterH2Styled onClick={()=>setIsOpenContacts(true)}>КОНТАКТИ</FooterH2Styled>
+          <FooterH2Styled onClick={()=>toggleList('КОНТАКТИ')} isOpenContacts={isOpenContacts}>КОНТАКТИ</FooterH2Styled>
           <FooterList id="contacts">
             <li>
               <FooterLinkStyled href="tel:+380486752312">
@@ -91,7 +102,7 @@ export const Footer = () => {
           </FooterList>
         </FooterBox>
         <FooterBox>
-          <FooterH2Styled onClick={()=>setIsOpenContacts(true)}>ПРО КОМПАНІЮ</FooterH2Styled>
+          <FooterH2Styled onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>ПРО КОМПАНІЮ</FooterH2Styled>
         </FooterBox>
         <FooterBox>
           <FooterH2Styled>Соціальні мережі</FooterH2Styled>
