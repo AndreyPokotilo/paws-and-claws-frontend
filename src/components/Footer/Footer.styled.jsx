@@ -121,10 +121,17 @@ export const FooterAStyled = styled.a`
 `;
 
 export const SocialListStyled = styled.ul`
-  margin-top: ${props => props.theme.spacing.step * 5}px;
   display: flex;
-
   gap: ${props => props.theme.spacing.step * 10}px;
+  margin-top: ${props => props.theme.spacing.step * 5}px;
+  @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
+    padding-left: 28px;
+    padding-right: 28px;
+  };
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    
+ 
+  }
 `;
 
 export const SocialLinkStyled = styled.a`
