@@ -71,7 +71,7 @@ export const FooterBox = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
     overflow: hidden;
   max-height: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? '190px' : '46px')};
-  transition: max-height 0.6s ease;
+  transition: max-height 0.8s ease;
   border-bottom: 0.5px solid ${props => props.theme.colors.white};
   padding-left: 28px;
   padding-right: 28px;
