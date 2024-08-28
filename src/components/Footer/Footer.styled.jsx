@@ -7,20 +7,23 @@ export const FooterStyled = styled.footer`
 
 
 export const FooterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: block;
   margin: 0 auto;
-  gap: ${props => props.theme.spacing.step * 5}px;
-  padding: 0 ${props => props.theme.spacing.step * 7}px
+  gap: ${props => props.theme.spacing.step * 1}px;
+  padding:40px ${props => props.theme.spacing.step * 0}px
     ${props => props.theme.spacing.step * 25}px
-    ${props => props.theme.spacing.step * 7}px;  
+    ${props => props.theme.spacing.step * 0}px;  
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0 ${props => props.theme.spacing.step * 10}px
     ${props => props.theme.spacing.step * 33}px
     ${props => props.theme.spacing.step * 10}px;
     width: ${props => props.theme.breakpoints.s};
+    gap: ${props => props.theme.spacing.step * 5}px;
+
   }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
     flex-wrap: nowrap;
@@ -36,20 +39,13 @@ export const FooterContainer = styled.div`
     width: ${props => props.theme.breakpoints.xl};
   }
 `;
+
 export const FooterLinkStyled = styled(Link)`
   color: ${props => props.theme.colors.white};
   font-size: ${props => props.theme.fontSizes.s};
-
   line-height: ${props => props.theme.lineHeight.l};
-  /* transition-property: color, background-color, transform; */
-
-  /* transform: scale(1);
-  transition-property: color, background-color, transform;
-  transition-duration: 0.2s;
-  transition-timing-function: ${props => props.theme.animations.cubicBezier}; */
 
   &:hover {
-    /* color: ${props => props.theme.colors.green}; */
     text-decoration: underline;
   }
 
@@ -61,23 +57,24 @@ export const FooterLinkStyled = styled(Link)`
   &.active {
     color: ${props => props.theme.colors.white};
     /* background-color: ${props => props.theme.colors.accent}; */
-
     /* padding: 6px 12px; */
     /* border-radius: 4px; */
-
     /* transform: scale(1); */
     pointer-events: none;
   }
 `;
 
 export const FooterBox = styled.div`
-  width: 250px;
-  padding-top: 10px;
-  
+  /* width: 250px; */
+  padding-top: 14px;
+  padding-bottom: 14px;
   @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
     overflow: hidden;
-  max-height: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? '140px' : '42px')};
-  transition: max-height 0.5s ease;
+  max-height: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? '190px' : '46px')};
+  transition: max-height 0.6s ease;
+  border-bottom: 0.5px solid ${props => props.theme.colors.white};
+  padding-left: 28px;
+  padding-right: 28px;
   }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
@@ -108,9 +105,7 @@ export const FooterAStyled = styled.a`
   transition-duration: 0.2s;
   transition-timing-function: ${props => props.theme.animations.cubicBezier}; */
 
-  &:hover
-  /* ,  &:focus  */ {
-    /* color: ${props => props.theme.colors.green}; */
+  &:hover{
     text-decoration: underline;
   }
 
@@ -121,12 +116,6 @@ export const FooterAStyled = styled.a`
 
   &.active {
     color: ${props => props.theme.colors.white};
-    /* background-color: ${props => props.theme.colors.accent}; */
-
-    /* padding: 6px 12px; */
-    /* border-radius: 4px; */
-
-    /* transform: scale(1); */
     pointer-events: none;
   }
 `;
@@ -147,7 +136,10 @@ export const FooterList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${props => props.theme.spacing.step * 2}px;
-  margin-top: ${props => props.theme.spacing.step * 5}px;
+  margin-top: ${props => props.theme.spacing.step * 2}px;
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    margin-top: ${props => props.theme.spacing.step * 5}px;
+  }
 `;
 
 // export const UsersList = styled.ul`

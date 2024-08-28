@@ -9,6 +9,8 @@ import {
   SocialLinkStyled,
   SocialListStyled,
 } from './Footer.styled';
+import { useWindowSize } from '../../hooks/useWindowSize';
+
 import {
   FacebookIcon,
   InstagramIcon,
@@ -21,6 +23,8 @@ export const Footer = () => {
   const [isOpenContacts, setIsOpenContacts] = useState(false);
   const [isOpenAboutUs, setIsOpenAboutUs] = useState(false);
 
+  const screenWidth = useWindowSize();
+
  const toggleList = (value) => {
   if(value === 'КАТАЛОГ'){
     setIsOpenCatalog(!isOpenCatlog);
@@ -30,21 +34,21 @@ export const Footer = () => {
   };
   if(value === 'ПОКУПЦЯМ'){
     setIsOpenCatalog(false);
-    setIsOpenForClients(true);
+    setIsOpenForClients(!isOpenForClients);
     setIsOpenContacts(false);
     setIsOpenAboutUs(false);
   };
   if(value === 'КОНТАКТИ'){
     setIsOpenCatalog(false);
     setIsOpenForClients(false);
-    setIsOpenContacts(true);
+    setIsOpenContacts(!isOpenContacts);
     setIsOpenAboutUs(false);
   };
   if(value === 'ПРО КОМПАНІЮ'){
     setIsOpenCatalog(false);
     setIsOpenForClients(false);
     setIsOpenContacts(false);
-    setIsOpenAboutUs(true);
+    setIsOpenAboutUs(!isOpenAboutUs);
   };
     
   } 
@@ -121,10 +125,27 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        <FooterBox onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>
+        {screenWidth<=767 && <FooterBox onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>
           <FooterH2Styled >ПРО КОМПАНІЮ</FooterH2Styled>
-        </FooterBox>
-        <FooterBox>
+        </FooterBox>}
+
+        {screenWidth<=767 ? <SocialListStyled>
+            <li>
+              <SocialLinkStyled href="http://instagram.com" target="_blank">
+                <InstagramIcon />
+              </SocialLinkStyled>
+            </li>
+            <li>
+              <SocialLinkStyled href="http://facebook.com" target="_blank">
+                <FacebookIcon />
+              </SocialLinkStyled>
+            </li>
+            <li>
+              <SocialLinkStyled href="http://t.me" target="_blank">
+                <TelegramIcon />
+              </SocialLinkStyled>
+            </li>
+          </SocialListStyled> :<FooterBox>
           <FooterH2Styled>Соціальні мережі</FooterH2Styled>
           <SocialListStyled>
             <li>
@@ -143,7 +164,7 @@ export const Footer = () => {
               </SocialLinkStyled>
             </li>
           </SocialListStyled>
-        </FooterBox>
+        </FooterBox>}
       </FooterContainer>
     </FooterStyled>
   );
