@@ -24,4 +24,5 @@ export * from './Bird';
 export * from './AttantionCicleLight';
 export * from './ArrowLeftViewedProducts';
 export * from './ArrowRightViewedProducts';
+export * from './CaretDown';
 

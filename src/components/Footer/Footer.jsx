@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  ArrowWraper,
   FooterBox,
   FooterContainer,
   FooterH2Styled,
@@ -10,7 +11,7 @@ import {
   SocialListStyled,
 } from './Footer.styled';
 import { useWindowSize } from '../../hooks/useWindowSize';
-
+import { CaretDown } from 'components/Icons';
 import {
   FacebookIcon,
   InstagramIcon,
@@ -60,6 +61,7 @@ export const Footer = () => {
       <FooterContainer>
         <FooterBox onClick={()=>toggleList('КАТАЛОГ')} isOpenCatlog={isOpenCatlog}>
           <FooterH2Styled >КАТАЛОГ</FooterH2Styled>
+          <ArrowWraper isOpenCatlog={isOpenCatlog} ><CaretDown /></ArrowWraper>
           <FooterList>
             <li>
               <FooterLinkStyled to="/brands">Бренди</FooterLinkStyled>
@@ -78,7 +80,7 @@ export const Footer = () => {
         </FooterBox>
         <FooterBox onClick={()=>toggleList('ПОКУПЦЯМ')} isOpenForClients={isOpenForClients}>
           <FooterH2Styled >ПОКУПЦЯМ</FooterH2Styled>
-
+          <ArrowWraper isOpenForClients={isOpenForClients} ><CaretDown /></ArrowWraper>
           <FooterList>
             <li>
               <FooterLinkStyled to="/pageUnderConstruction">
@@ -109,6 +111,7 @@ export const Footer = () => {
         </FooterBox>
         <FooterBox onClick={()=>toggleList('КОНТАКТИ')} isOpenContacts={isOpenContacts}>
           <FooterH2Styled >КОНТАКТИ</FooterH2Styled>
+          <ArrowWraper isOpenContacts={isOpenContacts} ><CaretDown /></ArrowWraper>
           <FooterList id="contacts">
             <li>
               <FooterLinkStyled href="tel:+380486752312">
@@ -127,6 +130,7 @@ export const Footer = () => {
         </FooterBox>
         {screenWidth<=767 && <FooterBox onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>
           <FooterH2Styled >ПРО КОМПАНІЮ</FooterH2Styled>
+          <ArrowWraper isOpenAboutUs={isOpenAboutUs} ><CaretDown /></ArrowWraper>
         </FooterBox>}
 
         {screenWidth<=767 ? <SocialListStyled>

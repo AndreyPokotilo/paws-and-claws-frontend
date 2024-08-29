@@ -69,12 +69,19 @@ export const FooterBox = styled.div`
   padding-top: 14px;
   padding-bottom: 14px;
   @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
+    position: relative;
     overflow: hidden;
   max-height: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? '190px' : '46px')};
   transition: max-height 0.8s ease;
   border-bottom: 0.5px solid ${props => props.theme.colors.white};
   padding-left: 28px;
   padding-right: 28px;
+  /* >span{
+    position: absolute;
+    right: 25px;
+    top: 6px;
+    transform: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? 'rotate(90deg)' : 'rotate(-90deg)')},
+  } */
   }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
@@ -85,6 +92,17 @@ export const FooterBox = styled.div`
     width: 304px;
   }
 `;
+
+export const ArrowWraper = styled.span`
+      position: absolute;
+    right: 25px;
+    top: 6px;
+    transform: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? 'rotate(180deg)' : 'rotate(0deg)'
+    };
+    @media (min-width: ${props => props.theme.breakpoints.s}) {
+   display: none;
+  }
+`
 
 export const FooterH2Styled = styled.h2`
   color: ${props => props.theme.colors.white};
