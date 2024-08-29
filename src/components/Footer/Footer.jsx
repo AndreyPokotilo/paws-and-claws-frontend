@@ -28,26 +28,26 @@ export const Footer = () => {
  const toggleList = (value) => {
   if(value === 'КАТАЛОГ'){
     setIsOpenCatalog(!isOpenCatlog);
-    setIsOpenForClients(false);
-    setIsOpenContacts(false);
-    setIsOpenAboutUs(false);
+    // setIsOpenForClients(false);
+    // setIsOpenContacts(false);
+    // setIsOpenAboutUs(false);
   };
   if(value === 'ПОКУПЦЯМ'){
-    setIsOpenCatalog(false);
+    // setIsOpenCatalog(false);
     setIsOpenForClients(!isOpenForClients);
-    setIsOpenContacts(false);
-    setIsOpenAboutUs(false);
+    // setIsOpenContacts(false);
+    // setIsOpenAboutUs(false);
   };
   if(value === 'КОНТАКТИ'){
-    setIsOpenCatalog(false);
-    setIsOpenForClients(false);
+    // setIsOpenCatalog(false);
+    // setIsOpenForClients(false);
     setIsOpenContacts(!isOpenContacts);
-    setIsOpenAboutUs(false);
+    // setIsOpenAboutUs(false);
   };
   if(value === 'ПРО КОМПАНІЮ'){
-    setIsOpenCatalog(false);
-    setIsOpenForClients(false);
-    setIsOpenContacts(false);
+    // setIsOpenCatalog(false);
+    // setIsOpenForClients(false);
+    // setIsOpenContacts(false);
     setIsOpenAboutUs(!isOpenAboutUs);
   };
     
