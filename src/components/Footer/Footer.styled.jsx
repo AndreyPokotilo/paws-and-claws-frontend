@@ -76,12 +76,6 @@ export const FooterBox = styled.div`
   border-bottom: 0.5px solid ${props => props.theme.colors.white};
   padding-left: 28px;
   padding-right: 28px;
-  /* >span{
-    position: absolute;
-    right: 25px;
-    top: 6px;
-    transform: ${({isOpenCatlog, isOpenForClients,isOpenContacts,isOpenAboutUs}) => (isOpenCatlog || isOpenForClients||isOpenContacts||isOpenAboutUs ? 'rotate(90deg)' : 'rotate(-90deg)')},
-  } */
   }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
