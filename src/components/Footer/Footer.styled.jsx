@@ -9,6 +9,7 @@ export const FooterStyled = styled.footer`
 export const FooterContainer = styled.div`
   display: block;
   margin: 0 auto;
+  overflow: hidden;
   gap: ${props => props.theme.spacing.step * 1}px;
   padding:40px ${props => props.theme.spacing.step * 0}px
     ${props => props.theme.spacing.step * 25}px

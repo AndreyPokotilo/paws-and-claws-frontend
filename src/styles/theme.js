@@ -21,7 +21,8 @@ export const theme = Object.freeze({
     filterImg: 'rgba(178, 178, 178, 0.60)',
   },
   fontSizes: {
-    xs: '12px',
+    xxs: '12px',
+    xs: '14px',
     s: '16px',
     m: '18px',
     l: '20px',
