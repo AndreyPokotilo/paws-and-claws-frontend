@@ -1,11 +1,13 @@
 import { Leng, LengLinkStyled, Link, NavStyle } from 'components';
-import { LanguageBurger, MenuContainer } from './MobileMenuNav.styled';
+import { ArrowWraper, LanguageBurger, MenuContainer } from './MobileMenuNav.styled';
 import { useState } from 'react';
+import { CaretDown } from 'components/Icons';
+
 
 export const MobailMenuNav = ({ setMobileMenuTogle }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenLanguage, setIsOpenLanguage] = useState(false);
     const toggleList = () => {
-        setIsOpen(!isOpen);
+        setIsOpenLanguage(!isOpenLanguage);
       };
 
   return (
@@ -30,8 +32,9 @@ export const MobailMenuNav = ({ setMobileMenuTogle }) => {
           КОНТАКТИ
         </Link>
 
-        <LanguageBurger onClick={toggleList} isOpen={isOpen}>
+        <LanguageBurger onClick={toggleList} isOpenLanguage={isOpenLanguage}>
           <p>MOBA</p>
+          <ArrowWraper isOpenLanguage={isOpenLanguage} ><CaretDown fill='black'/></ArrowWraper>
           <Leng>
             <LengLinkStyled>English</LengLinkStyled>
             <LengLinkStyled>Deutsch</LengLinkStyled>
