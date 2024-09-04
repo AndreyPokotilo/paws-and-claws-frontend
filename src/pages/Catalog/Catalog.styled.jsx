@@ -93,7 +93,7 @@ export const WrapperCatalog = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${theme.spacing.step * 3}px;
-  }
+  };
 
   ._variants {
     display: flex;

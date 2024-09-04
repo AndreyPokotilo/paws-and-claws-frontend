@@ -48,5 +48,5 @@ export const ArrowWraper = styled.span`
     }
     @media (min-width: ${props => props.theme.breakpoints.s}) {
    display: none;
-  }
+  };
 `
