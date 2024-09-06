@@ -83,7 +83,7 @@ export const PetButton = styled.button`
     fill: none;
     stroke: ${theme.colors.green};
   }
-`;
+`
 
 export const WrapperCatalog = styled.div`
   position: relative;
@@ -100,7 +100,7 @@ export const WrapperCatalog = styled.div`
     flex-direction: column;
     gap: ${theme.spacing.step * 2}px;
   }
-`;
+`
 
 export const BoxHiden = styled.div`
   display: none;
