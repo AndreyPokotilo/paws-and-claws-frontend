@@ -122,7 +122,7 @@ export const BoxHiden = styled.div`
     flex-direction: column;
     gap: ${theme.spacing.step * 3}px;
   }
-`;
+`
 
 export const Category = styled(Link)`
   font-size: ${theme.fontSizes.s};
