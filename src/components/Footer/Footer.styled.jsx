@@ -91,7 +91,7 @@ export const FooterBox = styled.div`
       isOpenAboutUs,
     }) =>
       isOpenCatlog || isOpenForClients || isOpenContacts || isOpenAboutUs
-        ? '190px'
+        ? '210px'
         : '46px'};
     transition: max-height 0.8s ease;
     border-bottom: 0.5px solid ${props => props.theme.colors.white};
