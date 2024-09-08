@@ -25,4 +25,8 @@ export * from './AttantionCicleLight';
 export * from './ArrowLeftViewedProducts';
 export * from './ArrowRightViewedProducts';
 export * from './CaretDown';
+export * from './MdiYoutube';
+export * from './EmailIcon';
+export * from './PersonArmsSpread';
+export * from './FacebookSquare';
 
