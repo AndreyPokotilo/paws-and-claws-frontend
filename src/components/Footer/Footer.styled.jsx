@@ -204,7 +204,10 @@ export const InfoList = styled.ul`
   margin-top: ${props => props.theme.spacing.step * 19}px;
   margin-bottom: ${props => props.theme.spacing.step * 16}px;
   padding: 0px 28px;
-
+  li:not(:last-child) a {
+    border-right: 1px solid white;
+    padding-right: 7px;
+  }
 `;
 
 export const InfoLink = styled(Link)`
