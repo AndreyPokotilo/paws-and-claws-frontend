@@ -15,9 +15,9 @@ import {
 import { useWindowSize } from '../../hooks/useWindowSize';
 import {
   CaretDown,
-  // EmailIcon,
+  EmailIcon,
   FacebookSquare,
-  // PersonArmsSpread,
+  PersonArmsSpread,
   MdiYoutube,
 } from 'components/Icons';
 import {
@@ -162,7 +162,7 @@ export const Footer = () => {
         )}
 
         {screenWidth <= 767 ? (
-          (
+          <>
             <SocialListStyled>
               <li>
                 <SocialLinkStyled href="http://instagram.com" target="_blank">
@@ -180,7 +180,43 @@ export const Footer = () => {
                 </SocialLinkStyled>
               </li>
             </SocialListStyled>
-          ) && <ContactsList></ContactsList> && <InfoList></InfoList>
+
+            <ContactsList>
+              <li>
+                <SocialLinkStyled>
+                  <EmailIcon />{' '}
+                  <FooterLinkStyled
+                    href="mailto:clawspaws@gmail.com"
+                    target="_blank"
+                  >
+                    Напишіть нам
+                  </FooterLinkStyled>
+                </SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled>
+                  <PersonArmsSpread /> <FooterLinkStyled
+                    href="https://www.google.com/maps"
+                    target="_blank"
+                  >
+                    Доступність 
+                  </FooterLinkStyled>
+                </SocialLinkStyled>
+              </li>
+            </ContactsList>
+
+            <InfoList>
+              <li>
+                <SocialLinkStyled></SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled></SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled></SocialLinkStyled>
+              </li>
+            </InfoList>
+          </>
         ) : (
           <FooterBox>
             <FooterH2Styled>Соціальні мережі</FooterH2Styled>
