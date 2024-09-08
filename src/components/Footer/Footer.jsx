@@ -11,6 +11,7 @@ import {
   SocialListStyled,
   ContactsList,
   InfoList,
+  InfoLink
 } from './Footer.styled';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import {
@@ -207,13 +208,13 @@ export const Footer = () => {
 
             <InfoList>
               <li>
-                <SocialLinkStyled></SocialLinkStyled>
+                <InfoLink>Умови обслуговування</InfoLink>
               </li>
               <li>
-                <SocialLinkStyled></SocialLinkStyled>
+              <InfoLink>Політика конфіденційност</InfoLink>
               </li>
               <li>
-                <SocialLinkStyled></SocialLinkStyled>
+              <InfoLink>Доступність</InfoLink>
               </li>
             </InfoList>
           </>

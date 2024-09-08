@@ -200,6 +200,16 @@ export const ContactsList = styled.ul`
 export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: ${props => props.theme.spacing.step * 2}px;
-  margin-top: ${props => props.theme.spacing.step * 5}px;
+  gap: ${props => props.theme.spacing.step * 3}px;
+  margin-top: ${props => props.theme.spacing.step * 19}px;
+  padding: 0px 28px;
+
+`;
+
+export const InfoLink = styled(Link)`
+  color: ${props => props.theme.colors.white};
+  font-size: ${props => props.theme.fontSizes.xs};
+  font-weight: ${props => props.theme.fontWeight.Light};
+  line-height: ${props => props.theme.lineHeight.m};
+  letter-spacing: 1.1px;
 `;
