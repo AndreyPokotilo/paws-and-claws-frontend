@@ -11,7 +11,7 @@ export const FooterContainer = styled.div`
   overflow: hidden;
   gap: ${props => props.theme.spacing.step * 1}px;
   padding: 40px ${props => props.theme.spacing.step * 0}px
-    ${props => props.theme.spacing.step * 25}px
+    ${props => props.theme.spacing.step * 10}px
     ${props => props.theme.spacing.step * 0}px;
   @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
     min-width: ${props => props.theme.breakpoints.xs};
