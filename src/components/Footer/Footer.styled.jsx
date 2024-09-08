@@ -139,15 +139,16 @@ export const FooterAStyled = styled.a`
 
 export const SocialListStyled = styled.ul`
   display: flex;
-  gap: ${props => props.theme.spacing.step * 10}px;
-  margin-top: ${props => props.theme.spacing.step * 5}px;
+  gap: ${props => props.theme.spacing.step * 4}px;
+  margin-top: ${props => props.theme.spacing.step * 14}px;
   @media (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: 767px) {
     padding-left: 28px;
     padding-right: 28px;
   };
   @media (min-width: ${props => props.theme.breakpoints.s}) {
-    
- 
+    gap: ${props => props.theme.spacing.step * 10}px;
+    margin-top: ${props => props.theme.spacing.step * 5}px;
+
   }
 `;
 

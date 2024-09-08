@@ -11,11 +11,17 @@ import {
   SocialListStyled,
 } from './Footer.styled';
 import { useWindowSize } from '../../hooks/useWindowSize';
-import { CaretDown, EmailIcon, FacebookSquare, PersonArmsSpread, MdiYoutube } from 'components/Icons';
+import {
+  CaretDown,
+  // EmailIcon,
+  FacebookSquare,
+  // PersonArmsSpread,
+  MdiYoutube,
+} from 'components/Icons';
 import {
   FacebookIcon,
   InstagramIcon,
-  TelegramIcon,  
+  TelegramIcon,
 } from 'components/Icons/SocialIcons';
 
 export const Footer = () => {
@@ -26,42 +32,44 @@ export const Footer = () => {
 
   const screenWidth = useWindowSize();
 
- const toggleList = (value) => {
-  if(value === 'КАТАЛОГ'){
-    setIsOpenCatalog(!isOpenCatlog);
-    // setIsOpenForClients(false);
-    // setIsOpenContacts(false);
-    // setIsOpenAboutUs(false);
+  const toggleList = value => {
+    if (value === 'КАТАЛОГ') {
+      setIsOpenCatalog(!isOpenCatlog);
+      // setIsOpenForClients(false);
+      // setIsOpenContacts(false);
+      // setIsOpenAboutUs(false);
+    }
+    if (value === 'ПОКУПЦЯМ') {
+      // setIsOpenCatalog(false);
+      setIsOpenForClients(!isOpenForClients);
+      // setIsOpenContacts(false);
+      // setIsOpenAboutUs(false);
+    }
+    if (value === 'КОНТАКТИ') {
+      // setIsOpenCatalog(false);
+      // setIsOpenForClients(false);
+      setIsOpenContacts(!isOpenContacts);
+      // setIsOpenAboutUs(false);
+    }
+    if (value === 'ПРО КОМПАНІЮ') {
+      // setIsOpenCatalog(false);
+      // setIsOpenForClients(false);
+      // setIsOpenContacts(false);
+      setIsOpenAboutUs(!isOpenAboutUs);
+    }
   };
-  if(value === 'ПОКУПЦЯМ'){
-    // setIsOpenCatalog(false);
-    setIsOpenForClients(!isOpenForClients);
-    // setIsOpenContacts(false);
-    // setIsOpenAboutUs(false);
-  };
-  if(value === 'КОНТАКТИ'){
-    // setIsOpenCatalog(false);
-    // setIsOpenForClients(false);
-    setIsOpenContacts(!isOpenContacts);
-    // setIsOpenAboutUs(false);
-  };
-  if(value === 'ПРО КОМПАНІЮ'){
-    // setIsOpenCatalog(false);
-    // setIsOpenForClients(false);
-    // setIsOpenContacts(false);
-    setIsOpenAboutUs(!isOpenAboutUs);
-  };
-    
-  } 
-        
-      
 
   return (
     <FooterStyled>
       <FooterContainer>
-        <FooterBox onClick={()=>toggleList('КАТАЛОГ')} isOpenCatlog={isOpenCatlog}>
-          <FooterH2Styled >КАТАЛОГ</FooterH2Styled>
-          <ArrowWraper isOpenCatlog={isOpenCatlog} ><CaretDown /></ArrowWraper>
+        <FooterBox
+          onClick={() => toggleList('КАТАЛОГ')}
+          isOpenCatlog={isOpenCatlog}
+        >
+          <FooterH2Styled>КАТАЛОГ</FooterH2Styled>
+          <ArrowWraper isOpenCatlog={isOpenCatlog}>
+            <CaretDown />
+          </ArrowWraper>
           <FooterList>
             <li>
               <FooterLinkStyled to="/brands">Бренди</FooterLinkStyled>
@@ -78,9 +86,14 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        <FooterBox onClick={()=>toggleList('ПОКУПЦЯМ')} isOpenForClients={isOpenForClients}>
-          <FooterH2Styled >ПОКУПЦЯМ</FooterH2Styled>
-          <ArrowWraper isOpenForClients={isOpenForClients} ><CaretDown /></ArrowWraper>
+        <FooterBox
+          onClick={() => toggleList('ПОКУПЦЯМ')}
+          isOpenForClients={isOpenForClients}
+        >
+          <FooterH2Styled>ПОКУПЦЯМ</FooterH2Styled>
+          <ArrowWraper isOpenForClients={isOpenForClients}>
+            <CaretDown />
+          </ArrowWraper>
           <FooterList>
             <li>
               <FooterLinkStyled to="/pageUnderConstruction">
@@ -109,9 +122,14 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        <FooterBox onClick={()=>toggleList('КОНТАКТИ')} isOpenContacts={isOpenContacts}>
-          <FooterH2Styled >КОНТАКТИ</FooterH2Styled>
-          <ArrowWraper isOpenContacts={isOpenContacts} ><CaretDown /></ArrowWraper>
+        <FooterBox
+          onClick={() => toggleList('КОНТАКТИ')}
+          isOpenContacts={isOpenContacts}
+        >
+          <FooterH2Styled>КОНТАКТИ</FooterH2Styled>
+          <ArrowWraper isOpenContacts={isOpenContacts}>
+            <CaretDown />
+          </ArrowWraper>
           <FooterList id="contacts">
             <li>
               <FooterLinkStyled href="tel:+380486752312">
@@ -128,12 +146,20 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
-        {screenWidth<=767 && <FooterBox onClick={()=>toggleList('ПРО КОМПАНІЮ')} isOpenAboutUs={isOpenAboutUs}>
-          <FooterH2Styled >ПРО КОМПАНІЮ</FooterH2Styled>
-          <ArrowWraper isOpenAboutUs={isOpenAboutUs} ><CaretDown /></ArrowWraper>
-        </FooterBox>}
+        {screenWidth <= 767 && (
+          <FooterBox
+            onClick={() => toggleList('ПРО КОМПАНІЮ')}
+            isOpenAboutUs={isOpenAboutUs}
+          >
+            <FooterH2Styled>ПРО КОМПАНІЮ</FooterH2Styled>
+            <ArrowWraper isOpenAboutUs={isOpenAboutUs}>
+              <CaretDown />
+            </ArrowWraper>
+          </FooterBox>
+        )}
 
-        {screenWidth<=767 ? <SocialListStyled>
+        {screenWidth <= 767 ? (
+          <SocialListStyled>
             <li>
               <SocialLinkStyled href="http://instagram.com" target="_blank">
                 <InstagramIcon />
@@ -149,26 +175,29 @@ export const Footer = () => {
                 <FacebookSquare />
               </SocialLinkStyled>
             </li>
-          </SocialListStyled> :<FooterBox>
-          <FooterH2Styled>Соціальні мережі</FooterH2Styled>
-          <SocialListStyled>
-            <li>
-              <SocialLinkStyled href="http://instagram.com" target="_blank">
-                <InstagramIcon />
-              </SocialLinkStyled>
-            </li>
-            <li>
-              <SocialLinkStyled href="http://facebook.com" target="_blank">
-                <FacebookIcon />
-              </SocialLinkStyled>
-            </li>
-            <li>
-              <SocialLinkStyled href="http://t.me" target="_blank">
-                <TelegramIcon />
-              </SocialLinkStyled>
-            </li>
           </SocialListStyled>
-        </FooterBox>}
+        ) : (
+          <FooterBox>
+            <FooterH2Styled>Соціальні мережі</FooterH2Styled>
+            <SocialListStyled>
+              <li>
+                <SocialLinkStyled href="http://instagram.com" target="_blank">
+                  <InstagramIcon />
+                </SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled href="http://facebook.com" target="_blank">
+                  <FacebookIcon />
+                </SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled href="http://t.me" target="_blank">
+                  <TelegramIcon />
+                </SocialLinkStyled>
+              </li>
+            </SocialListStyled>
+          </FooterBox>
+        )}
       </FooterContainer>
     </FooterStyled>
   );
