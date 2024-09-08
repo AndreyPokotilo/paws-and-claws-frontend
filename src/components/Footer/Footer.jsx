@@ -11,11 +11,11 @@ import {
   SocialListStyled,
 } from './Footer.styled';
 import { useWindowSize } from '../../hooks/useWindowSize';
-import { CaretDown } from 'components/Icons';
+import { CaretDown, EmailIcon, FacebookSquare, PersonArmsSpread, MdiYoutube } from 'components/Icons';
 import {
   FacebookIcon,
   InstagramIcon,
-  TelegramIcon,
+  TelegramIcon,  
 } from 'components/Icons/SocialIcons';
 
 export const Footer = () => {
@@ -140,13 +140,13 @@ export const Footer = () => {
               </SocialLinkStyled>
             </li>
             <li>
-              <SocialLinkStyled href="http://facebook.com" target="_blank">
-                <FacebookIcon />
+              <SocialLinkStyled href="http://youtube.com" target="_blank">
+                <MdiYoutube />
               </SocialLinkStyled>
             </li>
             <li>
-              <SocialLinkStyled href="http://t.me" target="_blank">
-                <TelegramIcon />
+              <SocialLinkStyled href="http://facebook.com" target="_blank">
+                <FacebookSquare />
               </SocialLinkStyled>
             </li>
           </SocialListStyled> :<FooterBox>
