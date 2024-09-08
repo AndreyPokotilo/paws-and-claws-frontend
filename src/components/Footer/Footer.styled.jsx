@@ -167,16 +167,17 @@ export const FooterList = styled.ul`
   }
 `;
 
-// export const UsersList = styled.ul`
-//   display: flex;
-//   flex-direction: column;
-//   gap: ${props => props.theme.spacing.step * 2}px;
-//   margin-top: ${props => props.theme.spacing.step * 5}px;
-// `;
+export const ContactsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: ${props => props.theme.spacing.step * 3}px;
+  margin-top: ${props => props.theme.spacing.step * 6}px;
+`;
 
-// export const ContactsList = styled.ul`
-//   display: flex;
-//   flex-direction: column;
-//   gap: ${props => props.theme.spacing.step * 3}px;
-//   margin-top: ${props => props.theme.spacing.step * 6}px;
-// `;
+
+export const InfoList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: ${props => props.theme.spacing.step * 2}px;
+  margin-top: ${props => props.theme.spacing.step * 5}px;
+`;

@@ -9,6 +9,8 @@ import {
   FooterStyled,
   SocialLinkStyled,
   SocialListStyled,
+  ContactsList,
+  InfoList,
 } from './Footer.styled';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import {
@@ -146,6 +148,7 @@ export const Footer = () => {
             </li>
           </FooterList>
         </FooterBox>
+
         {screenWidth <= 767 && (
           <FooterBox
             onClick={() => toggleList('ПРО КОМПАНІЮ')}
@@ -159,23 +162,25 @@ export const Footer = () => {
         )}
 
         {screenWidth <= 767 ? (
-          <SocialListStyled>
-            <li>
-              <SocialLinkStyled href="http://instagram.com" target="_blank">
-                <InstagramIcon />
-              </SocialLinkStyled>
-            </li>
-            <li>
-              <SocialLinkStyled href="http://youtube.com" target="_blank">
-                <MdiYoutube />
-              </SocialLinkStyled>
-            </li>
-            <li>
-              <SocialLinkStyled href="http://facebook.com" target="_blank">
-                <FacebookSquare />
-              </SocialLinkStyled>
-            </li>
-          </SocialListStyled>
+          (
+            <SocialListStyled>
+              <li>
+                <SocialLinkStyled href="http://instagram.com" target="_blank">
+                  <InstagramIcon />
+                </SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled href="http://youtube.com" target="_blank">
+                  <MdiYoutube />
+                </SocialLinkStyled>
+              </li>
+              <li>
+                <SocialLinkStyled href="http://facebook.com" target="_blank">
+                  <FacebookSquare />
+                </SocialLinkStyled>
+              </li>
+            </SocialListStyled>
+          ) && <ContactsList></ContactsList> && <InfoList></InfoList>
         ) : (
           <FooterBox>
             <FooterH2Styled>Соціальні мережі</FooterH2Styled>
