@@ -183,25 +183,25 @@ export const Footer = () => {
 
             <ContactsList>
               <li>
-                <SocialLinkStyled>
-                  <EmailIcon />{' '}
+                
+                  
                   <FooterLinkStyled
                     href="mailto:clawspaws@gmail.com"
                     target="_blank"
-                  >
+                  > <EmailIcon />
                     Напишіть нам
                   </FooterLinkStyled>
-                </SocialLinkStyled>
+                
               </li>
               <li>
-                <SocialLinkStyled>
-                  <PersonArmsSpread /> <FooterLinkStyled
+                
+                   <FooterLinkStyled
                     href="https://www.google.com/maps"
                     target="_blank"
-                  >
+                  > <PersonArmsSpread />
                     Доступність 
                   </FooterLinkStyled>
-                </SocialLinkStyled>
+                
               </li>
             </ContactsList>
 
