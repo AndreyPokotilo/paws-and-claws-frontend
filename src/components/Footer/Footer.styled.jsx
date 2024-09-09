@@ -97,7 +97,7 @@ export const FooterBox = styled.div`
     border-bottom: 0.5px solid ${props => props.theme.colors.white};
     padding-left: 28px;
     padding-right: 28px;
-  }
+  };
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     padding-top: 40px;
