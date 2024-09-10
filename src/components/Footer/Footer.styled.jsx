@@ -64,7 +64,7 @@ export const FooterLinkStyled = styled(Link)`
     /* border-radius: 4px; */
     /* transform: scale(1); */
     pointer-events: none;
-  }
+  };
   @media (min-width: ${props =>props.theme.breakpoints.xs}) and (max-width: 767px) {
     display: flex;
     align-items: center;
