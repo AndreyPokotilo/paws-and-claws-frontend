@@ -27,7 +27,7 @@ export const FooterContainer = styled.div`
       ${props => props.theme.spacing.step * 10}px;
     width: ${props => props.theme.breakpoints.s};
     gap: ${props => props.theme.spacing.step * 5}px;
-  }
+  };
   @media (min-width: ${props => props.theme.breakpoints.m}) {
     flex-wrap: nowrap;
     padding: 0 ${props => props.theme.spacing.step * 20 + 2}px
