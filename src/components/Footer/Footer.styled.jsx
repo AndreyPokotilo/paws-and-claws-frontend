@@ -34,7 +34,7 @@ export const FooterContainer = styled.div`
       ${props => props.theme.spacing.step * 53}px
       ${props => props.theme.spacing.step * 20 + 2}px;
     width: ${props => props.theme.breakpoints.m};
-  }
+  };
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     width: ${props => props.theme.breakpoints.l};
   }
