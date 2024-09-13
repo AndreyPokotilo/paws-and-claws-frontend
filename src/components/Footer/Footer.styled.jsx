@@ -37,7 +37,7 @@ export const FooterContainer = styled.div`
   };
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     width: ${props => props.theme.breakpoints.l};
-  }
+  };
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
     width: ${props => props.theme.breakpoints.xl};
   }
