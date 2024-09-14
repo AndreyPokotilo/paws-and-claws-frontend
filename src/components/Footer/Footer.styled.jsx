@@ -50,7 +50,7 @@ export const FooterLinkStyled = styled(Link)`
 
   &:hover {
     text-decoration: underline;
-  }
+  };
 
   &:active {
     color: ${props => props.theme.colors.secGreen};
