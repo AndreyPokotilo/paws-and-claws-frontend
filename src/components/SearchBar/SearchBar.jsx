@@ -1,6 +1,6 @@
 // this component is used to create search input, validate inputs and add search value to redux store
 
-import { ResetButton, SearchIcon } from 'components/Icons';
+import { ResetButton, SearchIcon, CrossToDelete } from 'components/Icons';
 import React, { useEffect, useState } from 'react';
 import { SearchBox } from './SearchBar.styled';
 import { Notify } from 'notiflix';
@@ -9,15 +9,19 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuerySearch } from 'redux/slice/searchSlice';
 import { selectSearchQueryStore } from 'redux/selectors/selectors';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
-export const SearchBar = () => {
+
+export const SearchBar = ({setSearchBarTogle}) => {
   const value = useSelector(selectSearchQueryStore); // extract search value from the Redux store
   const [searchValue, setSearchValue] = useState(value);
   const location = useLocation();
+  const screenWidth = useWindowSize();
 
   const [resetBoolean, setResetBoolean] = useState(false); //this state needs to reset search query and show or hide reset button
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
 
   useEffect(() => {
     setSearchValue(value);
@@ -92,6 +96,10 @@ export const SearchBar = () => {
             <SearchIcon />
           </button>
         </form>
+        {screenWidth <= 767 && <button onClick = {()=>{setSearchBarTogle(false)}}>
+        <CrossToDelete />
+        </button>}
+        
       </SearchBox>
     </>
   );

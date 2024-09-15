@@ -41,6 +41,7 @@ export const Header = () => {
   const [scroll, setScroll] = useState('');
   const [userMenuTogle, setUserMenuTogle] = useState(false);
   const [mobileMenuTogle, setMobileMenuTogle] = useState(false);
+  const [searchBarTogle, setSearchBarTogle] = useState(false);
   const { isLoggedIn, isShowUserMenu } = useAuth();
   const cartStore = useSelector(selectCartStore);
   const screenWidth = useWindowSize();
@@ -74,71 +75,83 @@ export const Header = () => {
   return (
     <HeaderStyled className={scroll}>
       <HeaderContainer>
-      
         <HeaderWrapper>
-          {screenWidth <= 767 ? (
-            <>
-              {' '}
-              {/* <SearchBar /> */}
-              <ButtonWrapper>
-              <ButtonMenu onClick={()=>setMobileMenuTogle(!mobileMenuTogle)}>
-                <MenuIcon />
-              </ButtonMenu>
-              <ButtonSearch>
-                <SearchIcon />
-              </ButtonSearch>
-              </ButtonWrapper>
-              <LogoLink to="/" className="logo">
-                <LogoIcon />
-              </LogoLink>
-            </>
+          {searchBarTogle && screenWidth <= 767 ? (
+            <SearchBar setSearchBarTogle={setSearchBarTogle}/>
           ) : (
             <>
-              {' '}
-              <LogoLink to="/" className="logo">
-                <LogoIcon />
-              </LogoLink>
-              <SearchBar />
+              {screenWidth <= 767 ? (
+                <>
+                  <ButtonWrapper>
+                    <ButtonMenu
+                      onClick={() => setMobileMenuTogle(!mobileMenuTogle)}
+                    >
+                      <MenuIcon />
+                    </ButtonMenu>
+
+                    <ButtonSearch
+                      onClick={() => setSearchBarTogle(!searchBarTogle)}
+                    >
+                      <SearchIcon />
+                    </ButtonSearch>
+                  </ButtonWrapper>
+
+                  <LogoLink to="/" className="logo">
+                    <LogoIcon />
+                  </LogoLink>
+                </>
+              ) : (
+                <>
+                  <LogoLink to="/" className="logo">
+                    <LogoIcon />
+                  </LogoLink>
+                  <SearchBar />
+                </>
+              )}
+              <LinkWrapper>
+                <ProfilBtn
+                  onClick={() => setUserMenuTogle(true)}
+                  disabled={userMenuTogle}
+                  isLoggedIn={isLoggedIn}
+                >
+                  <ProfileIcon />
+                </ProfilBtn>
+                <button>
+                  <HeartIcon />
+                </button>
+
+                <Link to={'/cart'}>
+                  {totalCount > 0 ? (
+                    <CountContainer>
+                      <CartNotEmptyIcon countDigits={countDigits(totalCount)} />
+
+                      <CountWrapper>
+                        <Count countDigits={countDigits(totalCount)}>
+                          {totalCount}
+                        </Count>
+                      </CountWrapper>
+                    </CountContainer>
+                  ) : (
+                    <CartIcon />
+                  )}
+                </Link>
+
+                {screenWidth >= 768 && (
+                  <Leng>
+                    <LengLinkStyled>Eng</LengLinkStyled>
+                    <LengLinkStyled className="accent">Укр</LengLinkStyled>
+                  </Leng>
+                )}
+                {userMenuTogle ? (
+                  <UserMenu setUserMenuTogle={setUserMenuTogle} />
+                ) : null}
+              </LinkWrapper>
             </>
           )}
-          <LinkWrapper>
-            <ProfilBtn
-              onClick={() => setUserMenuTogle(true)}
-              disabled={userMenuTogle}
-              isLoggedIn={isLoggedIn}
-            >
-              <ProfileIcon />
-            </ProfilBtn>
-            <button>
-              <HeartIcon />
-            </button>
-
-            <Link to={'/cart'}>
-              {totalCount > 0 ? (
-                <CountContainer>
-                  <CartNotEmptyIcon countDigits={countDigits(totalCount)} />
-
-                  <CountWrapper>
-                    <Count countDigits={countDigits(totalCount)}>
-                      {totalCount}
-                    </Count>
-                  </CountWrapper>
-                </CountContainer>
-              ) : (
-                <CartIcon />
-              )}
-            </Link>
-
-            {screenWidth >= 768 && <Leng>
-              <LengLinkStyled>Eng</LengLinkStyled>
-              <LengLinkStyled className="accent">Укр</LengLinkStyled>
-            </Leng>}
-            {userMenuTogle ? (
-              <UserMenu setUserMenuTogle={setUserMenuTogle} />
-            ) : null}
-          </LinkWrapper>
         </HeaderWrapper>
-        {mobileMenuTogle && <MobailMenuNav setMobileMenuTogle={setMobileMenuTogle}/>}
+        {mobileMenuTogle && (
+          <MobailMenuNav setMobileMenuTogle={setMobileMenuTogle} />
+        )}
       </HeaderContainer>
     </HeaderStyled>
   );
