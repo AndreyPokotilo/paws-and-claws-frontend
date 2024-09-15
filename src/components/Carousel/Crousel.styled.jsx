@@ -60,15 +60,8 @@ export const CarouselStyle = styled(Carousel)`
     display: flex;
     flex-direction: column;
     
-    /* width: ${props => props.theme.spacing.step * 184}px;
-    padding-bottom: ${props => props.theme.spacing.step * 28}px;
-    padding-left: ${props => props.theme.spacing.step * 27}px; */
-
     @media (min-width: ${props =>props.theme.breakpoints.xs}) and (max-width: 767px) {
-      /* width: ${props => props.theme.spacing.step * 184}px; */
-      width: 100%;
-      /* min-width: 360px; */
-
+    width: 100%;
     padding-bottom: ${props => props.theme.spacing.step * 17}px;
     padding-left: ${props => props.theme.spacing.step * 7}px;
     padding-right: ${props => props.theme.spacing.step * 7}px;
@@ -76,10 +69,12 @@ export const CarouselStyle = styled(Carousel)`
     }
 
     @media (min-width: ${theme.breakpoints.s}) {
-      gap: 28px;
-      width: ${props => props.theme.spacing.step * 184}px;
-    padding-bottom: ${props => props.theme.spacing.step * 20}px;
-    padding-left: ${props => props.theme.spacing.step * 20}px;
+      gap: 20px;
+      width: 100%;
+    padding-bottom: ${props => props.theme.spacing.step * 17}px;
+    padding-left: ${props => props.theme.spacing.step * 15}px;
+    padding-right: ${props => props.theme.spacing.step * 15}px;
+
     }
     @media (min-width: ${theme.breakpoints.m}) {
       gap: 24px;

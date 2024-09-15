@@ -38,8 +38,8 @@ export const Section = styled.section`
 export const Container = styled.div`
   /* outline: 1px solid red; */
 
- /* padding-top: ${props => props.theme.spacing.step * 5}px;
-  padding-bottom: ${props => props.theme.spacing.step * 5}px; */
+ /* padding-left: ${props => props.theme.spacing.step * 7}px;
+  padding-right: ${props => props.theme.spacing.step * 7}px; */
 
   margin-left: auto;
   margin-right: auto;
@@ -50,13 +50,13 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
-    padding-left: ${props => props.theme.spacing.step * 10}px;
-    padding-right: ${props => props.theme.spacing.step * 10}px;
+    /* padding-left: ${props => props.theme.spacing.step * 10}px;
+    padding-right: ${props => props.theme.spacing.step * 10}px; */
     width: ${props => props.theme.breakpoints.s};
   }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
-    padding-left: ${props => props.theme.spacing.step * 15}px;
-    padding-right: ${props => props.theme.spacing.step * 15}px;
+    /* padding-left: ${props => props.theme.spacing.step * 15}px;
+    padding-right: ${props => props.theme.spacing.step * 15}px; */
     width: ${props => props.theme.breakpoints.m};
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {

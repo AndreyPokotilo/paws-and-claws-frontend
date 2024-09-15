@@ -52,7 +52,6 @@ export default function Breadcrumbs() {
       </BreadcrumbsDivStyled>
     );
   });
-  console.log("crumbs:", crumbs)
 
   if (location.pathname !== '/') {
     return (
