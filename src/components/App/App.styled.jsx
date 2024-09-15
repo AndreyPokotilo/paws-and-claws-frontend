@@ -50,11 +50,13 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
+    padding-left: ${props => props.theme.spacing.step * 10}px;
+    padding-right: ${props => props.theme.spacing.step * 10}px;
     width: ${props => props.theme.breakpoints.s};
   }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
-    padding-top: ${props => props.theme.spacing.step * 10}px;
-    padding-bottom: ${props => props.theme.spacing.step * 10}px;
+    padding-left: ${props => props.theme.spacing.step * 15}px;
+    padding-right: ${props => props.theme.spacing.step * 15}px;
     width: ${props => props.theme.breakpoints.m};
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
