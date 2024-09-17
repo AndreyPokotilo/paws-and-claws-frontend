@@ -75,11 +75,11 @@ export const Header = () => {
   return (
     <HeaderStyled className={scroll}>
       <HeaderContainer>
-        <HeaderWrapper>
-          {searchBarTogle && screenWidth <= 767 ? (
+      {searchBarTogle && screenWidth <= 767 ? (
             <SearchBar setSearchBarTogle={setSearchBarTogle}/>
-          ) : (
-            <>
+          ) : <HeaderWrapper>
+           
+            
               {screenWidth <= 767 ? (
                 <>
                   <ButtonWrapper>
@@ -146,9 +146,10 @@ export const Header = () => {
                   <UserMenu setUserMenuTogle={setUserMenuTogle} />
                 ) : null}
               </LinkWrapper>
-            </>
-          )}
+            
+          
         </HeaderWrapper>
+        }
         {mobileMenuTogle && (
           <MobailMenuNav setMobileMenuTogle={setMobileMenuTogle} />
         )}
