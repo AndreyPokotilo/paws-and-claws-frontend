@@ -151,7 +151,7 @@ export const Header = () => {
         </HeaderWrapper>
         }
         {mobileMenuTogle && (
-          <MobailMenuNav setMobileMenuTogle={setMobileMenuTogle} />
+          <MobailMenuNav setMobileMenuTogle={setMobileMenuTogle}/>
         )}
       </HeaderContainer>
     </HeaderStyled>

@@ -7,8 +7,6 @@ export const MenuContainer = styled.div`
   bottom: -10px;
   left: 0px;
   width: 100%;
-  /* max-width: 430px;
-min-width: 320px; */
   height: 700px;
   background-color: ${props => props.theme.colors.mainBackground};
   @media (min-width: ${props => props.theme.breakpoints.s}) {
