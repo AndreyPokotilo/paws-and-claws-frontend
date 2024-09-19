@@ -1,6 +1,4 @@
 import styled from '@emotion/styled';
-// import { Link} from 'react-router-dom';
-// import { theme } from 'styles';
 
 export const MenuContainer = styled.div`
   position: relative;
@@ -13,10 +11,6 @@ export const MenuContainer = styled.div`
     display: none;
   }
 `;
-
-// export const LogoLink = styled(Link)`
-// `;
-
 
 export const LanguageBurger = styled.div`
   color: ${props => props.theme.colors.black};
