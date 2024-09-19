@@ -28,6 +28,7 @@ export const BreadcrumbsDivStyled = styled.div`
     color: ${props => props.theme.colors.orange};
     cursor: default;
   }
+ 
 `;
 
 export const BreadcrumbsMainPageLinkStyled = styled(Link)`
@@ -54,4 +55,11 @@ export const BreadcrumbsContainerStyled = styled.div`
   margin-top: 30px;
   display: flex;
   align-items: center;
+  
+  @media (min-width: ${props =>props.theme.breakpoints.xs}) and (max-width: 767px) {
+    margin-left: 28px;
+}
+@media (min-width: ${props =>props.theme.breakpoints.s}) {
+  margin-left: 0px;
+}
 `;
