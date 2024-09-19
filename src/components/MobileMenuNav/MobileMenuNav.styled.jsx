@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 export const MenuContainer = styled.div`
   position: relative;
-  bottom: -10px;
+  bottom: 0px;
   left: 0px;
   width: 100%;
   height: 700px;
