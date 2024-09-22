@@ -45,7 +45,7 @@ const SharedLayout = () => {
       <Section>
         <Container>
           <BoxMT>
-            {screenWidth > 767 && <NavStyle>
+            {screenWidth >= 768 && <NavStyle>
               <Link to={'catalog'}>Каталог</Link>
               <Link to={'prices-drop'}>Акції</Link>
               <Link to={'brands'}>Бренди</Link>
