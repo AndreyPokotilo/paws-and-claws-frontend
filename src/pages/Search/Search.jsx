@@ -148,6 +148,8 @@ export default function Search() {
     currentPage,
     sortingType,
   }); // Use a custom hook usePagination to handle pagination-related functionalities such as managing product lists, pagination data, and changing pages.
+  //   console.log("response:", response)
+  // console.log("productsList:", productsList)
 
   const totalDocs = response?.totalDocs;
   useEffect(() => {}, [totalDocs]); // rerender search component when total docs are changed

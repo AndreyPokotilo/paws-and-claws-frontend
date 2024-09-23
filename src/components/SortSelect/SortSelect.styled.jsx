@@ -77,7 +77,7 @@ export const IndicatorValue = styled.li`
   cursor: inherit;
   &:hover {
     color: ${theme.colors.green};
-  }
+  };
 `;
 export const BurgerBtn = styled.button`
   margin-bottom: auto;
