@@ -45,7 +45,6 @@ export function usePagination({
       }
 
       if (!loadMoreClicked && currentPage === 1 && !pageNumberClicked) {
-        // console.log('2');
         setProductsList(response.docs);
         setLoadMoreClicked(false);
         setPaginationData(updatePaginationData(response));
