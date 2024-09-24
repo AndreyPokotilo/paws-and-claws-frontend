@@ -8,7 +8,7 @@ export const BreadcrumbsLinkStyled = styled(Link)`
   margin-right: 15px;
   &:hover {
     text-decoration: underline;
-  }
+  };
 `;
 
 export const BreadcrumbsNoLinkStyled = styled.div`
