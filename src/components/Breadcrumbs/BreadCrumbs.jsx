@@ -33,7 +33,6 @@ export default function Breadcrumbs() {
       ? stateBreadCrumbNameCrumb[languageSite] ||
         stateBreadCrumbNameCrumb['productName']
       : null;
-      console.log("renderToPage:", renderToPage)
 
     return (
       <BreadcrumbsDivStyled key={nanoid()}>
