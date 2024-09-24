@@ -27,7 +27,7 @@ export const BreadcrumbsDivStyled = styled.div`
   &:last-child {
     color: ${props => props.theme.colors.orange};
     cursor: default;
-  }
+  };
  
 `;
 
@@ -44,7 +44,7 @@ export const BreadcrumbsMainPageLinkStyled = styled(Link)`
   line-height: 100%;
   &:hover {
     text-decoration: underline;
-  }
+  };
 `;
 
 export const BreadcrumbsiconStyled = styled.div`
