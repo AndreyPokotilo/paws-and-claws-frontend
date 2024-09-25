@@ -83,5 +83,5 @@ export const BurgerBtn = styled.button`
   margin-bottom: auto;
   &:hover {
     fill: ${theme.colors.green};
-  }
+  };
 `;
