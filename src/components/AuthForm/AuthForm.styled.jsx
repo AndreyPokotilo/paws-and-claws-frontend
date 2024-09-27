@@ -25,7 +25,7 @@ export const FormContainer = styled.div`
   }
   @media (min-width: 1281px) {
     height: 617px;
-  }
+  };
 `;
 
 export const Titel = styled.h1`
