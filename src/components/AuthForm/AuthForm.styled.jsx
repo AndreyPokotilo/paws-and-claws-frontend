@@ -22,7 +22,7 @@ export const FormContainer = styled.div`
     width: 608px;
     height: 629px;
     border-radius: 15px;
-  }
+  };
   @media (min-width: 1281px) {
     height: 617px;
   };
