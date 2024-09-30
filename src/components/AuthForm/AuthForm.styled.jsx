@@ -34,7 +34,7 @@ export const Titel = styled.h1`
   @media (min-width: 768px) {
     font-size: ${theme.fontSizes.xxl};
     margin-bottom: 30px;
-  }
+  };
 `;
 
 export const FormField = styled.div`
