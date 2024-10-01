@@ -56,7 +56,7 @@ export const InputEmailWraper = styled.div`
   border: 1px solid;
   @media (min-width: 768px) {
     margin-bottom: 29px;
-  }
+  };
 `;
 
 export const InputPasswordWraper = styled.div`
@@ -65,7 +65,7 @@ export const InputPasswordWraper = styled.div`
   border: 1px solid;
   @media (min-width: 768px) {
     margin-bottom: 29px;
-  }
+  };
 `;
 
 export const InputConfirmPasswordWraper = styled.div`
@@ -74,7 +74,7 @@ export const InputConfirmPasswordWraper = styled.div`
   border: 1px solid;
   @media (min-width: 768px) {
     margin-bottom: 29px;
-  }
+  };
 `;
 
 export const InputForm = styled(Field)`
@@ -87,7 +87,7 @@ export const InputForm = styled(Field)`
 
   @media (min-width: 768px) {
     font-size: ${theme.fontSizes.m};
-  }
+  };
 `;
 
 export const ErrorMess = styled(ErrorMessage)`
