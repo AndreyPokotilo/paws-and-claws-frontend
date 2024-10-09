@@ -9,7 +9,7 @@ export const MenuContainer = styled.div`
   background-color: ${props => props.theme.colors.mainBackground};
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     display: none;
-  }
+  };
 `;
 
 export const LanguageBurger = styled.div`
