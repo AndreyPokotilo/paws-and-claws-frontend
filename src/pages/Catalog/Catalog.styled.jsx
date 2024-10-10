@@ -47,42 +47,48 @@ export const PetButton = styled.button`
 
   svg {
     fill: black;
-  }
+  };
 
   svg.rodents {
     fill: none;
-  }
+  };
 
   & span {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
+  };
 
   &.active {
     position: relative;
     z-index: ${theme.zIndexes.catalogPetButtons};
     background-color: ${theme.colors.beige};
-  }
+  };
 
   &:hover {
     background-color: ${theme.colors.beige};
-  }
+  };
 
   &:active,
   &:active svg {
     color: ${theme.colors.green};
     fill: ${theme.colors.green};
-  }
+  };
   & svg.rodents {
     stroke: black;
-  }
+  };
 
   &:active svg.rodents {
     color: ${theme.colors.green};
     fill: none;
     stroke: ${theme.colors.green};
-  }
+  };
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+  };
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+  };
+  @media (min-width: ${props => props.theme.breakpoints.l}) {
+  };
 `
 
 export const WrapperCatalog = styled.div`

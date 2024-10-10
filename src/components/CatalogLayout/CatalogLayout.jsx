@@ -339,6 +339,7 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
+                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -360,6 +361,7 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
+                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -387,6 +389,7 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
+                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -408,6 +411,7 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
+                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -431,6 +435,7 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
+                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
