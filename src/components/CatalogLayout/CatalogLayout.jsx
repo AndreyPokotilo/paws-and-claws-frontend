@@ -328,11 +328,7 @@ export const CatalogLayout = () => {
         <AsideCatalog>
           {!isError && structure?.length !== 0 && (
             <CategoryList>
-              <ul
-                style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}
-              >
                 {structure.map((el, i) => {
-                  // console.log('el:', el);
                   switch (el.code) {
                     case 'for_dogs':
                       return (
@@ -451,7 +447,6 @@ export const CatalogLayout = () => {
                       return <></>;
                   }
                 })}
-              </ul>
             </CategoryList>
           )}
         </AsideCatalog>

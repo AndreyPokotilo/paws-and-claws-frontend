@@ -9,7 +9,7 @@ export const CatalogContainer = styled.div`
   gap: ${theme.spacing.step * 5}px;
 `;
 
-export const CategoryList = styled.div`
+export const CategoryList = styled.ul`
   width: ${theme.spacing.step * 76}px;
   display: flex;
   flex-direction: column;
