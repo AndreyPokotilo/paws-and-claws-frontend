@@ -76,7 +76,7 @@ export const PetButton = styled.button`
     /* svg.rodents {
       display: none;
     } */
-  }
+  };
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     padding: ${theme.spacing.step + 2}px ${theme.spacing.step * 2}px;
