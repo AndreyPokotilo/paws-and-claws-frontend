@@ -1,4 +1,6 @@
 import { Cat, Dog, Rodents, Fish, Bird, RightArrow } from 'components/Icons';
+import { useWindowSize } from '../../hooks/useWindowSize';
+
 
 import {
   AsideCatalog,
@@ -234,6 +236,9 @@ export const CatalogLayout = () => {
   const [structure, setStructure] = useState([]);
   const [categories, setCategories] = useState([]);
   const pathname = useLocation().pathname;
+
+  const screenWidth = useWindowSize();
+
 
   const pathParts = pathname.split('/');
   const lastPathParts = pathParts[pathParts.length - 1];
