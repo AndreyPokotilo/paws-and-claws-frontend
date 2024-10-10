@@ -73,9 +73,9 @@ export const PetButton = styled.button`
     svg {
       display: none;
     }
-    svg.rodents {
+    /* svg.rodents {
       display: none;
-    }
+    } */
   }
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
@@ -89,10 +89,10 @@ export const PetButton = styled.button`
     background-color: ${theme.colors.secGreen};
 
     border: 1px solid ${theme.colors.green};
-
+    
     &:hover {
-      background-color: ${theme.colors.beige};
-    }
+    background-color: ${theme.colors.beige};
+  }
 
     &:active,
     &:active svg {
