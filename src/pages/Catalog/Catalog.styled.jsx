@@ -36,60 +36,122 @@ export const PetButton = styled.button`
   ${props => props.active && `z-index: ${theme.zIndexes.catalogPetButtons};`}
   padding: ${theme.spacing.step + 2}px ${theme.spacing.step * 2}px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 44px;
   width: 304px;
-  background-color: ${theme.colors.secGreen};
+  /* background-color: ${theme.colors.secGreen}; */
 
-  border: 1px solid ${theme.colors.green};
+  /* border: 1px solid ${theme.colors.green}; */
 
-  svg {
+  /* svg {
     fill: black;
   };
 
   svg.rodents {
     fill: none;
-  };
+  }; */
 
   & span {
     display: flex;
     align-items: center;
     gap: 8px;
-  };
+  }
 
   &.active {
     position: relative;
     z-index: ${theme.zIndexes.catalogPetButtons};
     background-color: ${theme.colors.beige};
-  };
+  }
 
   &:hover {
     background-color: ${theme.colors.beige};
-  };
+  }
 
-  &:active,
-  &:active svg {
-    color: ${theme.colors.green};
-    fill: ${theme.colors.green};
-  };
-  & svg.rodents {
-    stroke: black;
-  };
+  @media (max-width: ${props => props.theme.breakpoints.m - 1}px) {
+    svg {
+      display: none;
+    }
+    svg.rodents {
+      display: none;
+    }
+  }
 
-  &:active svg.rodents {
-    color: ${theme.colors.green};
-    fill: none;
-    stroke: ${theme.colors.green};
-  };
   @media (min-width: ${props => props.theme.breakpoints.s}) {
-  };
+    padding: ${theme.spacing.step + 2}px ${theme.spacing.step * 2}px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    width: 304px;
+    background-color: ${theme.colors.secGreen};
+
+    border: 1px solid ${theme.colors.green};
+
+    &:hover {
+      background-color: ${theme.colors.beige};
+    }
+
+    &:active,
+    &:active svg {
+      color: ${theme.colors.green};
+      fill: ${theme.colors.green};
+    }
+    & svg.rodents {
+      stroke: black;
+    }
+
+    &:active svg.rodents {
+      color: ${theme.colors.green};
+      fill: none;
+      stroke: ${theme.colors.green};
+    }
+    svg {
+      fill: black;
+    }
+
+    svg.rodents {
+      fill: none;
+    }
+
+    & span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &.active {
+      position: relative;
+      z-index: ${theme.zIndexes.catalogPetButtons};
+      background-color: ${theme.colors.beige};
+    }
+
+    &:hover {
+      background-color: ${theme.colors.beige};
+    }
+
+    &:active,
+    &:active svg {
+      color: ${theme.colors.green};
+      fill: ${theme.colors.green};
+    }
+    & svg.rodents {
+      stroke: black;
+    }
+
+    &:active svg.rodents {
+      color: ${theme.colors.green};
+      fill: none;
+      stroke: ${theme.colors.green};
+    }
+  }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
-  };
+  }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
-  };
-`
+  }
+`;
 
 export const WrapperCatalog = styled.div`
   position: relative;
@@ -106,7 +168,7 @@ export const WrapperCatalog = styled.div`
     flex-direction: column;
     gap: ${theme.spacing.step * 2}px;
   }
-`
+`;
 
 export const BoxHiden = styled.div`
   display: none;
@@ -128,7 +190,7 @@ export const BoxHiden = styled.div`
     flex-direction: column;
     gap: ${theme.spacing.step * 3}px;
   }
-`
+`;
 
 export const Category = styled(Link)`
   font-size: ${theme.fontSizes.s};
