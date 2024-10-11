@@ -4,9 +4,14 @@ import { theme } from 'styles';
 
 export const CatalogContainer = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
-  /* gap: 20px; */
+  flex-direction: column;
+  justify-content: center;
   gap: ${theme.spacing.step * 5}px;
+
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 export const CategoryList = styled.ul`
@@ -27,12 +32,10 @@ export const AsideCatalog = styled.aside`
   display: block;
   flex-grow: 25%;
 
-  width: ${theme.spacing.step * 76}px;
-
-  /* .check-with-label:checked + .label-for-check {
-    font-weight: bold;
-    color: red;
-  } */
+  width: 100%;
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    width: ${theme.spacing.step * 76}px;
+  }
 `;
 
 export const PetButton = styled.button`
@@ -45,7 +48,6 @@ export const PetButton = styled.button`
   width: 100%;
   height: 44px;
   
-
   & span {
     display: flex;
     align-items: center;
@@ -135,10 +137,6 @@ export const PetButton = styled.button`
       fill: none;
       stroke: ${theme.colors.green};
     }
-  }
-  @media (min-width: ${props => props.theme.breakpoints.m}) {
-  }
-  @media (min-width: ${props => props.theme.breakpoints.l}) {
   }
 `;
 
