@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const instance = axios.create({  
-  // baseURL: 'http://localhost:4000',
-  baseURL: 'https://paws-and-claws-backend.onrender.com',
+  baseURL: 'http://localhost:4000',
+  // baseURL: 'https://paws-and-claws-backend.onrender.com',
   // withCredentials: true,
 });
 

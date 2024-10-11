@@ -10,12 +10,16 @@ export const CatalogContainer = styled.div`
 `;
 
 export const CategoryList = styled.ul`
-  width: ${theme.spacing.step * 76}px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
   gap: ${theme.spacing.step}px;
   /* position: relative; */
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    width: ${theme.spacing.step * 76}px;
+    flex-direction: column;
+  }
 `;
 
 export const AsideCatalog = styled.aside`
@@ -40,18 +44,7 @@ export const PetButton = styled.button`
   align-items: center;
   width: 100%;
   height: 44px;
-  width: 304px;
-  /* background-color: ${theme.colors.secGreen}; */
-
-  /* border: 1px solid ${theme.colors.green}; */
-
-  /* svg {
-    fill: black;
-  };
-
-  svg.rodents {
-    fill: none;
-  }; */
+  
 
   & span {
     display: flex;
@@ -69,13 +62,10 @@ export const PetButton = styled.button`
     background-color: ${theme.colors.beige};
   }
 
-  @media (max-width: ${props => props.theme.breakpoints.m - 1}px) {
+  @media (max-width: 767px) {
     svg {
       display: none;
     }
-    /* svg.rodents {
-      display: none;
-    } */
   };
 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
@@ -83,7 +73,6 @@ export const PetButton = styled.button`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 44px;
     width: 304px;
     background-color: ${theme.colors.secGreen};
