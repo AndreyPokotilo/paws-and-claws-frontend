@@ -5,9 +5,8 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, 304px);
   grid-gap: 20px;
+  
   @media screen and (min-width: 430px) and (max-width: 767px) {
-  /* padding-top: 34px;
-  padding-bottom: 33px; */
   width: 374px;
   padding: 34px 34px;
   margin-left: auto;
