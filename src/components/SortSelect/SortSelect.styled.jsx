@@ -13,14 +13,11 @@ export const BurgerContainer = styled.div`
     position: relative;
     align-items: center;
     justify-content: center;
-    /* top: 10px;
-    right: 0px; */
     height: 56px;
     width: 430px;
     border-top: 1px solid ${theme.colors.secGreen} ;
     border-bottom: 1px solid ${theme.colors.secGreen} ;
-  }
-
+  };
 `;
 
 export const SortingSpan = styled.span`
@@ -35,6 +32,9 @@ export const SortingSpan = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  @media (max-width: 767px) {
+    margin: 0px;
+  };
 `;
 
 export const DropDownContainer = styled.div`
