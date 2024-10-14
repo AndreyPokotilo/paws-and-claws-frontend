@@ -9,6 +9,18 @@ export const BurgerContainer = styled.div`
   display: flex;
   align-items: flex-start;
   /* cursor: pointer; */
+  @media (max-width: 767px) {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    /* top: 10px;
+    right: 0px; */
+    height: 56px;
+    width: 430px;
+    border-top: 1px solid ${theme.colors.secGreen} ;
+    border-bottom: 1px solid ${theme.colors.secGreen} ;
+  }
+
 `;
 
 export const SortingSpan = styled.span`
