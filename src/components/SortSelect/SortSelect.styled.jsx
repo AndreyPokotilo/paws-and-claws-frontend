@@ -17,7 +17,7 @@ export const BurgerContainer = styled.div`
     width: 430px;
     border-top: 1px solid ${theme.colors.secGreen} ;
     border-bottom: 1px solid ${theme.colors.secGreen} ;
-  };
+  }
 `;
 
 export const SortingSpan = styled.span`
