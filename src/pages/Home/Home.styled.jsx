@@ -56,8 +56,9 @@ export const Title = styled.h2`
   color: ${theme.colors.black};
   font-weight: ${theme.fontWeight.Medium};
   line-height: 1;
+  padding-left: 28px;
   margin-top: ${theme.spacing.step * 10}px;
-  margin-bottom: ${theme.spacing.step * 7 + 2}px;
+  margin-bottom: ${theme.spacing.step * 10}px;
   @media (min-width: ${theme.breakpoints.s}) {
     margin-top: ${theme.spacing.step * 12}px;
   margin-bottom: ${theme.spacing.step * 12 + 3}px;

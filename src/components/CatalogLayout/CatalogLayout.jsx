@@ -324,9 +324,9 @@ export const CatalogLayout = () => {
           {/* Каталог товарів */}
           {title ? title?.title : 'Каталог товарів'}
         </Title>
-        <Sorter>
+        {screenWidth >= 768 && <Sorter>
           <SortSelect style={{ top: '100px', left: '0px' }} />
-        </Sorter>
+        </Sorter>}
       </TitelContainer>
 
       <CatalogContainer>
@@ -339,7 +339,6 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
-                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -361,7 +360,6 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
-                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -389,7 +387,6 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
-                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -411,7 +408,6 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
-                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -435,7 +431,6 @@ export const CatalogLayout = () => {
                       return (
                         <li key={i}>
                           <PetButton
-                            screenWidth={screenWidth}
                             active={active}
                             id={el.code}
                             className={
@@ -459,6 +454,11 @@ export const CatalogLayout = () => {
                 })}
             </CategoryList>
           )}
+
+          {screenWidth <= 767 && <Sorter>
+          <SortSelect style={{ top: '100px', left: '0px' }} />
+        </Sorter>}
+        
         </AsideCatalog>
         <WrapperCatalog className="WrapperCatalog">
           <BoxHiden className={active ? 'active' : undefined}>
