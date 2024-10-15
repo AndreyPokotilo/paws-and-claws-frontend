@@ -17,6 +17,12 @@ export const BurgerContainer = styled.div`
     width: 430px;
     border-top: 1px solid ${theme.colors.secGreen} ;
     border-bottom: 1px solid ${theme.colors.secGreen} ;
+  };
+  @media (min-width: ${theme.breakpoints.s}) {
+    right: 70px;
+  }
+  @media (min-width: ${theme.breakpoints.m}) {
+    right: 36px;
   }
 `;
 
@@ -33,7 +39,9 @@ export const SortingSpan = styled.span`
   font-weight: 400;
   line-height: 20px;
   @media (max-width: 767px) {
-    margin: 0px;
+  margin-top: 0px;
+  margin-right: 10px;
+    
   };
 `;
 

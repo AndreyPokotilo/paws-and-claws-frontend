@@ -25,12 +25,12 @@ export const SortSelect = () => {
   // const sortingType = useSelector(selectSortingTypeStore);
   const [searchParams, setSearchParams] = useSearchParams();
   // const query = searchParams.get('query');
+  const [isClickBurger, setIsClickBurger] = useState(true);
+  const [indicator, setIndicator] = useState(null);
+
   const defaultSortSelect = useSelector(selectSortingTypeStoreDefault);
 
   const sortBy = searchParams.get('sortBy') || defaultSortSelect;
-
-  const [isClickBurger, setIsClickBurger] = useState(true);
-  const [indicator, setIndicator] = useState(null);
 
   // const defaultSortSelect = useSelector(selectSortingTypeStoreDefault);
 
