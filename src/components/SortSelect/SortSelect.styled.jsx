@@ -20,10 +20,10 @@ export const BurgerContainer = styled.div`
   };
   @media (min-width: ${theme.breakpoints.s}) {
     right: 70px;
-  }
+  };
   @media (min-width: ${theme.breakpoints.m}) {
     right: 36px;
-  }
+  };
 `;
 
 export const SortingSpan = styled.span`
