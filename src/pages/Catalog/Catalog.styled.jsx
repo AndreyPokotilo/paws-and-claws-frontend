@@ -186,11 +186,11 @@ export const Category = styled(Link)`
 
   &:hover {
     color: ${theme.colors.green};
-  }
+  };
 
   &:active {
     color: ${theme.colors.orange};
-  }
+  };
 `;
 
 export const FoodTypeList = styled.ul`
