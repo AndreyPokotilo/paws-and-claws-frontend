@@ -14,7 +14,6 @@ export const BurgerContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 56px;
-    width: 430px;
     border-top: 1px solid ${theme.colors.secGreen} ;
     border-bottom: 1px solid ${theme.colors.secGreen} ;
   };
