@@ -51,15 +51,15 @@ export const HeaderWrapper = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     padding-left: ${props => props.theme.spacing.step * 4}px;
   padding-right: ${props => props.theme.spacing.step * 4}px;
-  };
+  }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
     padding-left: ${props => props.theme.spacing.step * 7}px;
   padding-right: ${props => props.theme.spacing.step * 7}px;
-  };
+  }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     padding-left: ${props => props.theme.spacing.step * 20 - 3}px;
     padding-right: ${props => props.theme.spacing.step * 21 - 1}px;
-  };
+  }
 `;
 
 export const LogoLink = styled(Link)``;

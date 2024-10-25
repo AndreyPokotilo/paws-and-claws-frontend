@@ -22,7 +22,7 @@ export const BurgerContainer = styled.div`
   };
   @media (min-width: ${theme.breakpoints.m}) {
     right: 36px;
-  };
+  }
 `;
 
 export const SortingSpan = styled.span`
@@ -40,8 +40,7 @@ export const SortingSpan = styled.span`
   @media (max-width: 767px) {
   margin-top: 0px;
   margin-right: 10px;
-    
-  };
+  }
 `;
 
 export const DropDownContainer = styled.div`
@@ -80,7 +79,6 @@ export const IndicatorWrapper = styled.ul`
   align-items: flex-start;
   padding-top: 4px;
   padding-bottom: 4px;
-  /* gap: 8px; */
   width: 100%;
 `;
 

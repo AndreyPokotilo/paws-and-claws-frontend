@@ -61,6 +61,6 @@ export const Title = styled.h2`
   margin-bottom: ${theme.spacing.step * 10}px;
   @media (min-width: ${theme.breakpoints.s}) {
     margin-top: ${theme.spacing.step * 12}px;
-  margin-bottom: ${theme.spacing.step * 12 + 3}px;
+    margin-bottom: ${theme.spacing.step * 12 + 3}px;
   }
 `;
