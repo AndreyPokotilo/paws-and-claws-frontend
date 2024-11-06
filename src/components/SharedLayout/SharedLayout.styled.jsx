@@ -28,13 +28,13 @@ export const NavStyle = styled.nav`
 
   @media (min-width: ${theme.breakpoints.xs}) and (max-width: 767px) {
     padding-top: 72px;
-  }
+  };
 
   @media (min-width: ${theme.breakpoints.s}) {
     display: flex;
     justify-content: center;
     gap: ${theme.spacing.step * 6}px;
-  }
+  };
 `;
 
 export const Main = styled.div``;
