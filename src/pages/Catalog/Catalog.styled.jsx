@@ -18,9 +18,17 @@ export const CategoryList = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   gap: ${theme.spacing.step}px;
+  @media (max-width: 767px) {
+    max-width: 372px;
+    margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
   /* position: relative; */
+    }
+ 
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     width: ${theme.spacing.step * 76}px;
     flex-direction: column;
@@ -31,8 +39,10 @@ export const AsideCatalog = styled.aside`
   /* outline: 1px solid black; */
   display: block;
   flex-grow: 25%;
-
   width: 100%;
+  @media (max-width: 767px) {
+    position: relative;
+  }
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     width: ${theme.spacing.step * 76}px;
   }
@@ -171,8 +181,11 @@ export const BoxHiden = styled.div`
   &.active {
     display: block;
     @media (max-width: 767px) {
-      top: -20px;
-      left: 63px;
+      /* width: 100%;
+      max-width: 304px; */
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%);
   }}
 
   & > ul {

@@ -4,11 +4,11 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 
 import {
   AsideCatalog,
-  BoxHiden,
+  // BoxHiden,
   CatalogContainer,
-  Category,
+  // Category,
   CategoryList,
-  FoodType,
+  // FoodType,
   PetButton,
   WrapperCatalog,
 } from 'pages/Catalog/Catalog.styled';
@@ -21,6 +21,7 @@ import { useFetchAllStructureQuery } from 'redux/api/operations';
 import { useDispatch } from 'react-redux';
 import { SortSelect } from 'components/SortSelect/SortSelect';
 import { flattenCategories } from 'helpers';
+import { HidenList } from './BoxHiden';
 // import { fetchAllStructure } from 'services/api';
 
 const defaultData = [
@@ -233,11 +234,13 @@ const defaultData = [
 
 export const CatalogLayout = () => {
   const [active, setActive] = useState('');
+  console.log("active:", active)
   const [structure, setStructure] = useState([]);
   const [categories, setCategories] = useState([]);
   const pathname = useLocation().pathname;
 
   const screenWidth = useWindowSize();
+  const hiddenElement = document.getElementById('hidden');
 
 
   const pathParts = pathname.split('/');
@@ -252,7 +255,6 @@ export const CatalogLayout = () => {
 
   const dispatch = useDispatch();
 
-  const hiddenElement = document.getElementById('hidden');
 
   // for pagination
   // const [activPage, setActivPage] = useState(1);
@@ -458,49 +460,10 @@ export const CatalogLayout = () => {
           {screenWidth <= 767 && <Sorter>
           <SortSelect style={{ top: '100px', left: '0px' }} />
         </Sorter>}
-        
+
         </AsideCatalog>
         <WrapperCatalog className="WrapperCatalog">
-          <BoxHiden className={active ? 'active' : undefined}>
-            <ul className="_categories">
-              {active &&
-                categories.map(({ code, ua, _id, _variants, _pet }, index) => {
-                  return (
-                    <li key={_id} className="_categories-item">
-                      <Category
-                        className="Category"
-                        to={`${_pet}/${_id}`}
-                        onClick={() => {
-                          setActive('');
-                          hiddenElement.style.display = 'none';
-                          document.body.classList.remove('scroll-lock');
-                        }}
-                      >
-                        {ua}
-                      </Category>
-                      <ul className="_variants">
-                        {_variants.map(({ _id, ua, code, _pet, _category }) => {
-                          return (
-                            <li key={_id} className="_variants-item">
-                              <FoodType
-                                to={`${_pet}/${_category}/${_id}`}
-                                onClick={() => {
-                                  setActive('');
-                                  hiddenElement.style.display = 'none';
-                                  document.body.classList.remove('scroll-lock');
-                                }}
-                              >
-                                {ua}
-                              </FoodType>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </li>
-                  );
-                })}
-            </ul>
-          </BoxHiden>
+         <HidenList hiddenElement={hiddenElement} active={active} categories={categories} setActive={setActive}/>
           <Outlet />
         </WrapperCatalog>
       </CatalogContainer>
