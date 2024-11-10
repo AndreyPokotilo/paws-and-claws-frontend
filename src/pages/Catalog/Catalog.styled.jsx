@@ -183,7 +183,7 @@ export const BoxHiden = styled.div`
     @media (max-width: 767px) {
       /* width: 100%;
       max-width: 304px; */
-      top: 10px;
+      top: -20px;
       left: 50%;
       transform: translate(-50%);
   }}
