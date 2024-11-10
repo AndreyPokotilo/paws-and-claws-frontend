@@ -170,7 +170,10 @@ export const BoxHiden = styled.div`
 
   &.active {
     display: block;
-  }
+    @media (max-width: 767px) {
+      top: -20px;
+      left: 63px;
+  }}
 
   & > ul {
     display: flex;
