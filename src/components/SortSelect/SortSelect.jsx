@@ -24,13 +24,17 @@ import { selectSortingTypeStoreDefault } from 'redux/selectors/selectors';
 export const SortSelect = () => {
   // const sortingType = useSelector(selectSortingTypeStore);
   const [searchParams, setSearchParams] = useSearchParams();
+  console.log("searchParams:", searchParams)
   // const query = searchParams.get('query');
-  const [isClickBurger, setIsClickBurger] = useState(true);
+  const [isClickBurger, setIsClickBurger] = useState(false);
   const [indicator, setIndicator] = useState(null);
+  console.log("indicator:", indicator)
 
   const defaultSortSelect = useSelector(selectSortingTypeStoreDefault);
+  console.log("defaultSortSelect:", defaultSortSelect)
 
   const sortBy = searchParams.get('sortBy') || defaultSortSelect;
+  console.log("sortBy:", sortBy)
 
   // const defaultSortSelect = useSelector(selectSortingTypeStoreDefault);
 
@@ -133,7 +137,7 @@ export const SortSelect = () => {
             </DefaultValue>
           </DefaultWrapper>
         ) : (
-          <IndicatorWrapper>
+          <IndicatorWrapper isClickBurge={isClickBurger}>
             <IndicatorValue onClick={() => indicatorHandler('cheap')}>
               спочатку дешеві
             </IndicatorValue>
@@ -148,6 +152,7 @@ export const SortSelect = () => {
             </IndicatorValue>
           </IndicatorWrapper>
         )}
+
         <BurgerBtn
           style={{
             transform: isClickBurger ? 'rotate(90deg)' : 'rotate(-90deg)',

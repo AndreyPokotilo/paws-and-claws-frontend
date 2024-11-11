@@ -234,7 +234,6 @@ const defaultData = [
 
 export const CatalogLayout = () => {
   const [active, setActive] = useState('');
-  console.log("active:", active)
   const [structure, setStructure] = useState([]);
   const [categories, setCategories] = useState([]);
   const pathname = useLocation().pathname;

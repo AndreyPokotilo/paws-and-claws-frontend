@@ -10,7 +10,9 @@ export const BurgerContainer = styled.div`
   align-items: flex-start;
   /* cursor: pointer; */
   @media (max-width: 767px) {
-    position: relative;
+    /* position: relative; */
+    /* flex-direction: row; */
+    width: 100%;
     align-items: center;
     justify-content: center;
     height: 56px;
@@ -55,6 +57,13 @@ export const DropDownContainer = styled.div`
   padding-bottom: 3px;
   z-index: ${theme.zIndexes.sortSelect};
   cursor: pointer;
+  @media (max-width: 767px) {
+    /* position: relative; */
+    /* overflow-y: auto; */
+    max-height: ${({isClickBurger})=>(isClickBurger ? '102px' : '40px')};
+    transition: max-height 0.3 s ease;
+  }
+
 `;
 
 export const DefaultWrapper = styled.div`
@@ -80,6 +89,13 @@ export const IndicatorWrapper = styled.ul`
   padding-top: 4px;
   padding-bottom: 4px;
   width: 100%;
+  @media (max-width: 767px) {
+    max-height: ${({isClickBurger})=>(isClickBurger ? '102px' : '0px')};
+    transition: max-height 0.3 s ease;
+    /* position: absolute; */
+    /* top: 0px;
+    left: 30px; */
+  }
 `;
 
 export const IndicatorValue = styled.li`
