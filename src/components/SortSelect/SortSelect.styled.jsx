@@ -10,12 +10,12 @@ export const BurgerContainer = styled.div`
   align-items: flex-start;
   /* cursor: pointer; */
   @media (max-width: 767px) {
-    /* position: relative; */
-    /* flex-direction: row; */
+    position: relative;
     width: 100%;
     align-items: center;
-    justify-content: center;
-    height: 56px;
+    padding-left: 65px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     border-top: 1px solid ${theme.colors.secGreen} ;
     border-bottom: 1px solid ${theme.colors.secGreen} ;
   };
@@ -58,10 +58,11 @@ export const DropDownContainer = styled.div`
   z-index: ${theme.zIndexes.sortSelect};
   cursor: pointer;
   @media (max-width: 767px) {
-    /* position: relative; */
-    /* overflow-y: auto; */
-    max-height: ${({isClickBurger})=>(isClickBurger ? '102px' : '40px')};
-    transition: max-height 0.3 s ease;
+    position: absolute;
+    top: 7px;
+    right: 65px;
+    max-height: ${({isClickBurger})=>(isClickBurger ? '40px' : '110px')};
+    transition: max-height 0.3s ease;
   }
 
 `;
@@ -89,19 +90,11 @@ export const IndicatorWrapper = styled.ul`
   padding-top: 4px;
   padding-bottom: 4px;
   width: 100%;
-  @media (max-width: 767px) {
-    max-height: ${({isClickBurger})=>(isClickBurger ? '102px' : '0px')};
-    transition: max-height 0.3 s ease;
-    /* position: absolute; */
-    /* top: 0px;
-    left: 30px; */
-  }
 `;
 
 export const IndicatorValue = styled.li`
   display: inline-block;
   width: 100%;
-
   padding: 4px 0 4px 0;
   color: ${theme.colors.black};
   font-size: 14px;
