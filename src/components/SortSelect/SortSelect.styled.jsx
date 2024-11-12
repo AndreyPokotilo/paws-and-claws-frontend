@@ -100,7 +100,7 @@ export const IndicatorWrapper = styled.ul`
     background-color: ${theme.colors.mainBackground};
     border: 1px solid ${theme.colors.secGreen};
     width: 176px;
-  }
+  };
 `;
 
 export const IndicatorValue = styled.li`
