@@ -23,24 +23,29 @@ import { selectSortingTypeStoreDefault } from 'redux/selectors/selectors';
 
 export const SortSelect = () => {
   // const sortingType = useSelector(selectSortingTypeStore);
-  const [searchParams, setSearchParams] = useSearchParams();
-  console.log("searchParams:", searchParams)
-  // const query = searchParams.get('query');
   const [isClickBurger, setIsClickBurger] = useState(false);
-  const [indicator, setIndicator] = useState(null);
-  console.log("indicator:", indicator)
+  const [indicator, setIndicator] = useState('');
 
+  console.log("indicator:", indicator);
+
+  const [searchParams, setSearchParams] = useSearchParams();
   const defaultSortSelect = useSelector(selectSortingTypeStoreDefault);
-  console.log("defaultSortSelect:", defaultSortSelect)
-
+  // console.log("defaultSortSelect:", defaultSortSelect)
+  
   const sortBy = searchParams.get('sortBy') || defaultSortSelect;
-  console.log("sortBy:", sortBy)
+  // const query = searchParams.get('query');
+ 
+
+  
+
+  // const sortBy = searchParams.get('sortBy') || defaultSortSelect;
 
   // const defaultSortSelect = useSelector(selectSortingTypeStoreDefault);
 
   // const dispatch = useDispatch();
 
   const indicatorHandler = value => {
+    console.log("value:", value)
     switch (value) {
       case 'cheap':
         setIndicator('спочатку дешеві');
@@ -77,9 +82,13 @@ export const SortSelect = () => {
     setIsClickBurger(!isClickBurger);
   };
 
+
+
   useEffect(() => {
     // Викликати indicatorHandler при монтажі компонента на основі значення sortBy з URLSearchParams
     if (sortBy) {
+      console.log("sortBy:", sortBy)
+
       indicatorHandler(sortBy);
       setIsClickBurger(true);
     } else {
@@ -138,16 +147,20 @@ export const SortSelect = () => {
           </DefaultWrapper>
         ) : (
           <IndicatorWrapper isClickBurge={isClickBurger}>
-            <IndicatorValue onClick={() => indicatorHandler('cheap')}>
+            <IndicatorValue onClick={()=>{  console.log("onClick-cheap")
+              indicatorHandler('cheap')}}>
               спочатку дешеві
             </IndicatorValue>
-            <IndicatorValue onClick={() => indicatorHandler('expensive')}>
+            <IndicatorValue onClick={()=>{console.log("onClick-expensive") 
+              indicatorHandler('expensive')}}>
               спочатку дорогі
             </IndicatorValue>
-            <IndicatorValue onClick={() => indicatorHandler('rating')}>
+            <IndicatorValue onClick={()=>{console.log("onClick-rating") 
+              indicatorHandler('rating')}}>
               за рейтингом
             </IndicatorValue>
-            <IndicatorValue onClick={() => indicatorHandler('discounts')}>
+            <IndicatorValue onClick={()=>{console.log("onClick-discounts")  
+              indicatorHandler('discounts')}}>
               знижки та акції
             </IndicatorValue>
           </IndicatorWrapper>

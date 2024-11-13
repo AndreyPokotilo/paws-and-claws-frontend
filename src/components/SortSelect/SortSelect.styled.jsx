@@ -10,8 +10,6 @@ export const BurgerContainer = styled.div`
   align-items: flex-start;
   /* cursor: pointer; */
   @media (max-width: 767px) {
-    /* position: relative; */
-    /* flex-direction: row; */
     width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -105,7 +103,7 @@ export const IndicatorWrapper = styled.ul`
 
 export const IndicatorValue = styled.li`
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
 
   padding: 4px 0 4px 0;
   color: ${theme.colors.black};
@@ -119,6 +117,7 @@ export const IndicatorValue = styled.li`
   @media (max-width: 767px) {
     margin-top: 3px;
     margin-left:12px;
+    /* margin-bottom: 6px; */
   };
 `;
 export const BurgerBtn = styled.button`
