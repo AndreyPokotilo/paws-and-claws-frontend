@@ -61,8 +61,7 @@ export const DropDownContainer = styled.div`
   @media (max-width: 767px) {
     position: relative;
     width: 176px;
-
-  }
+  };
 
 `;
 
