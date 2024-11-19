@@ -194,11 +194,11 @@ export const Button = styled.button`
 
   &:hover {
     background-color: rgb(133, 135, 136);
-  }
+  };
   @media screen and (min-width: 768px) {
     margin-top: 28px;
     margin-bottom: 20px;
-  }
+  };
   @media screen and (min-width: 1280px) {
   }
 `;
