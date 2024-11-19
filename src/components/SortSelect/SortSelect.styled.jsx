@@ -43,7 +43,7 @@ export const SortingSpan = styled.span`
   @media (max-width: 767px) {
   margin-top: 0px;
   margin-right: 10px;
-  }
+  };
 `;
 
 export const DropDownContainer = styled.div`
