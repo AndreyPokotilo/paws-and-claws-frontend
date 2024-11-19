@@ -7,11 +7,11 @@ import { theme } from 'styles';
 
 export const LogFormContainer = styled.div`
   margin: 0 auto;
-  padding: 40px 12px;
+  padding: 40px 30px;
   text-align: center;
   background-color: ${theme.colors.white};
   border-radius: 10px;
-  width: 280px;
+  width: 360px;
   height: 425px;
   box-shadow: 7px 10px 14px rgba(63, 143, 248, 0.11);
     z-index: ${theme.zIndexes.loginMenu};
@@ -117,7 +117,7 @@ export const IconWraper = styled.div`
   justify-content: end;
   width: 54px;
   top: 12px;
-  left: 187px;
+  left: 237px;
   @media (min-width: 768px) {
     width: 60px;
     top: 10px;
@@ -180,7 +180,7 @@ export const OffIcon = styled(VisibilityOffIcon)`
 export const Button = styled.button`
   width: 100%;
   height: 48px;
-  margin-top: 96px;
+  margin-top: 70px;
   margin-bottom: 8px;
   font-size: ${theme.fontSizes.l};
   font-style: normal;

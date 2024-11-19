@@ -4,6 +4,7 @@ import { theme } from 'styles';
 
 export const HeaderStyled = styled.header`
   /* outline: 1px solid black; */
+  position: relative;
   position: fixed;
   width: 100%;
   height: ${props => props.theme.spacing.step * 19}px;
@@ -114,7 +115,7 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LinkWrapper = styled.div`
-  position: relative;
+  /* position: relative; */
   display: flex;
   gap: ${theme.spacing.step * 1}px;
   /* align-items: center; */
