@@ -200,7 +200,7 @@ export const Button = styled.button`
     margin-bottom: 20px;
   };
   @media screen and (min-width: 1280px) {
-  }
+  };
 `;
 
 export const ToRegister = styled.span`
