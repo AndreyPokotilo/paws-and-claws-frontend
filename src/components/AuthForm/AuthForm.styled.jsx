@@ -74,7 +74,7 @@ export const InputConfirmPasswordWraper = styled.div`
   border: 1px solid;
   @media (min-width: 768px) {
     margin-bottom: 29px;
-  };
+  }
 `;
 
 export const InputForm = styled(Field)`
