@@ -99,7 +99,7 @@ export const ErrorMess = styled(ErrorMessage)`
 
   @media (min-width: 768px) {
     font-size: 12px;
-  };
+  }
 `;
 
 export const SuccessMessage = styled.p`
