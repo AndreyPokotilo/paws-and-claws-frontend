@@ -102,7 +102,7 @@ export const IndicatorWrapper = styled.ul`
 
 export const IndicatorValue = styled.li`
   display: inline-block;
-  /* width: 100%; */
+  /* width: 176px; */
 
   padding: 4px 0 4px 0;
   color: ${theme.colors.black};
