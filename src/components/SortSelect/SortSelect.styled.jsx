@@ -112,12 +112,12 @@ export const IndicatorValue = styled.li`
   cursor: inherit;
   &:hover {
     color: ${theme.colors.green};
-  };
+  }
   @media (max-width: 767px) {
     margin-top: 3px;
     margin-left:12px;
     /* margin-bottom: 6px; */
-  };
+  }
 `;
 export const BurgerBtn = styled.button`
   margin-bottom: auto;
