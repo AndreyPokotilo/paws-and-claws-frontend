@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { useWindowSize } from '../../hooks/useWindowSize';
+
 import { ProductDetailsCarousel } from 'components/ProductDetailsCarousel/ProductCarousel/ProductCarousel';
 import { CardContainer, ImageContainer, ProductContainer } from './ProductCard.styled';
 
@@ -17,6 +19,8 @@ import { Notify } from 'notiflix';
 export const ProductCard = () => {
   const { id } = useParams();
 
+  const screenWidth = useWindowSize();
+
   const dispatch = useDispatch();
 
   const {
@@ -32,6 +36,7 @@ export const ProductCard = () => {
       dispatch(setBreadCrumbs([response]));
     }
   }, [dispatch, isErrorProduct, isLoadingProduct, response]);
+  console.log("response:", response)
 
   const { data: structure, isLoading, isError } = useFetchAllStructureQuery();
 
@@ -60,10 +65,10 @@ export const ProductCard = () => {
           <div style={{ minHeight: '930px' }}>
             {Object.keys(response).length !== 0 && (
               <ProductContainer>
-                <ImageContainer>
+                {screenWidth >= 768 && <ImageContainer>
                   <ProductDetailsCarousel id={id} images={response.images} />
                   <DetailsList product={response} />
-                </ImageContainer>
+                </ImageContainer>}
 
                 <CardContainer style={{ position: 'relative' }}>
                   <MainInfo product={response} prodNameLength={response.productName.length} />
