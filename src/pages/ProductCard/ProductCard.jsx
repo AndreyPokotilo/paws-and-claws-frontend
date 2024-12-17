@@ -36,7 +36,6 @@ export const ProductCard = () => {
       dispatch(setBreadCrumbs([response]));
     }
   }, [dispatch, isErrorProduct, isLoadingProduct, response]);
-  console.log("response:", response)
 
   const { data: structure, isLoading, isError } = useFetchAllStructureQuery();
 

@@ -3,6 +3,10 @@ import { Rating } from 'components';
 import SizeListLink from '../SizeList/SizeList';
 import { ReactComponent as Icon } from '../../../svg/CheckCircle.svg';
 import ReactCountryFlag from 'react-country-flag';
+import { useWindowSize } from '../../../hooks/useWindowSize'
+
+import { ProductDetailsCarousel } from 'components/ProductDetailsCarousel/ProductCarousel/ProductCarousel';
+
 
 import {
   FlexBox,
@@ -31,6 +35,7 @@ const MainInfo = ({ product, prodNameLength }) => {
     mainImage,
     shortDescription,
     _country,
+    images,
     items,
     favorite,
   } = product;
@@ -41,6 +46,8 @@ const MainInfo = ({ product, prodNameLength }) => {
 
   const inStock = prodType.count > 0;
   const prodNameRef = useRef(null);
+  const screenWidth = useWindowSize();
+
 
   useEffect(() => {
     setProdType(items[0]);
@@ -153,11 +160,14 @@ const MainInfo = ({ product, prodNameLength }) => {
         </AilabilityWrapper>
       )}
 
+   {screenWidth <= 767 && <ProductDetailsCarousel id={_id} images={images} />}
+
       <SizeListLink
         items={items}
         prodType={prodType}
         changePropType={changePropType}
       />
+      
       <QuntityProduct
         prodType={prodType}
         prodDescription={{
