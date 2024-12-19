@@ -35,7 +35,7 @@ export const CustomNavLink = styled(Link)`
   &:focus,
   &:hover {
     color: ${theme.colors.black};
-  }
+  };
 
   .active {
     color: ${theme.colors.black};
