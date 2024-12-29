@@ -51,7 +51,7 @@ const MainInfo = ({ product, prodNameLength }) => {
 
   useEffect(() => {
     setProdType(items[0]);
-  }, [items]);
+  }, [items])
 
   useEffect(() => {
     if (prodNameLength !== nameHeight) setNameHeight(prodNameLength);
